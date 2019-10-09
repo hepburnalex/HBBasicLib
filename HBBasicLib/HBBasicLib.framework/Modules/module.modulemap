@@ -1,0 +1,6 @@
+framework module HBBasicLib {
+  umbrella header "HBBasicLib.h"
+
+  export *
+  module * { export * }
+}
