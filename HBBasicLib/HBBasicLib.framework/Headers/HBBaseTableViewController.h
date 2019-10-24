@@ -37,6 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL isShowSeparatorLine;
 @property (nonatomic, assign) BOOL isShowCorner;
 @property (nonatomic, assign) NSInteger page;
+@property (nonatomic, assign) CGFloat sectionHeaderHeight;
+@property (nonatomic, assign) CGFloat sectionFooterHeight;
 
 /* 注册cell */
 - (void)registerCellClass:(NSString *)classname;

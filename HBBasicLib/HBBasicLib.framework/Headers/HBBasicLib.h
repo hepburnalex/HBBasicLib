@@ -22,6 +22,13 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #define HBBasicHeader_h
 
 /*
+ * Utils
+ */
+#import <HBBasicLib/HBFaceIDManager.h>
+#import <HBBasicLib/HBLocalNotificationManager.h>
+#import <HBBasicLib/PhotoSelectManager.h>
+
+/*
  * BaseView
  */
 #import <HBBasicLib/BaseADViewController.h>
@@ -30,14 +37,14 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/HBBaseWebViewController.h>
 
 /*
- * BaseTableView
+ * HBTableView
  */
 #import <HBBasicLib/HBBaseTableViewController.h>
 #import <HBBasicLib/HBRefreshTableView.h>
 #import <HBBasicLib/HBBaseTableViewCell.h>
 
 /*
- * BaseCollectionView
+ * HBCollectionView
  */
 #import <HBBasicLib/HBBaseCollectionViewCell.h>
 #import <HBBasicLib/HBBaseCollectionViewController.h>
@@ -76,6 +83,8 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/UIImage+Extend.h>
 #import <HBBasicLib/HBColor.h>
 #import <HBBasicLib/NSString+HBDate.h>
+#import <HBBasicLib/NSDate+HBCalendar.h>
+#import <HBBasicLib/NSString+HBValidate.h>
 #import <HBBasicLib/HBCleanCache.h>
 #import <HBBasicLib/HBBasicHeader.h>
 

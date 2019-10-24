@@ -36,6 +36,8 @@ typedef enum {
 + (NSTimeInterval)timeIntervalFromString:(NSString *)timeStr;
 + (NSDate *)dateTimeFromString:(NSString *)timeStr formatType:(HBDateFormatType)formatType;
 + (NSString *)stringFromDateTime:(NSDate *)datetime formatType:(HBDateFormatType)formatType;
-+ (NSString *)weekFromDate:(NSDate *)date;
+//+ (NSString *)weekFromDate:(NSDate *)date;
+//+ (NSInteger)monthFromDate:(NSDate *)date;
+//+ (NSInteger)getNumberOfDaysInMonth:(NSDate *)date;
 
 @end

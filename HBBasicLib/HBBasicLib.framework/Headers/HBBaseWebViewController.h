@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *userAgent;
 @property (nonatomic, strong) NSString *urlStr;
 @property (nonatomic, strong) NSString *htmlStr;
+@property (nonatomic, assign) BOOL isLockTitle;
 
 @end
 

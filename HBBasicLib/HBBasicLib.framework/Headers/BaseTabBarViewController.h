@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseTabBarViewController : UITabBarController
 
+@property (nonatomic, strong) UIFont *tabItemFont;
 @property (nonatomic, strong) UIColor *tabItemColor;
 @property (nonatomic, strong) UIColor *tabItemSelectedColor;
 @property (nonatomic, strong) UIColor *tabBackColor;
