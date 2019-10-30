@@ -18,6 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *htmlStr;
 @property (nonatomic, assign) BOOL isLockTitle;
 
+- (NSString *)getFullHtmlStr:(NSString *)content;
+- (NSString *)getJSTagByName:(NSString *)name;
+- (NSString *)getJSTitle;
+
 @end
 
 NS_ASSUME_NONNULL_END

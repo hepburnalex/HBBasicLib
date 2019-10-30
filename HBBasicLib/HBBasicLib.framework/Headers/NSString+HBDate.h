@@ -29,6 +29,8 @@ typedef enum {
 @property (nonatomic, readonly) NSString *MMDDHHMMTime;
 @property (nonatomic, readonly) NSString *MMDDTime;
 @property (nonatomic, readonly) NSString *shortDateTime;
+//Encrypt
+@property (nonatomic, readonly) NSString *MD5String;
 
 + (NSDate *)dateTimeFromString:(NSString *)timeStr;
 + (NSString *)stringFromDateTime:(NSDate *)datetime;

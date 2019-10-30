@@ -13,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HBLocalNotificationManager : NSObject
 
 - (void)initLocalNotification;
-- (void)addLocalNotification:(NSDate *)date title:(NSString *)title desc:(NSString *)desc;
-- (void)removeLocalNotification:(NSDate *)date title:(NSString *)title desc:(NSString *)desc;
+- (void)addLocalNotification:(NSString *)tag date:(NSDate *)date title:(NSString *)title desc:(NSString *)desc;
+- (void)removeLocalNotification:(NSString *)tag;
 
 + (instancetype)instance;
 
