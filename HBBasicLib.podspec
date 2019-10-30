@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "HBBasicLib"
-  spec.version      = "1.0.3"
+  spec.version      = "1.0.4"
   spec.summary      = "HBBasic iOS SDK"
 
   spec.description  = "iOS library for HBBasic"
@@ -21,6 +21,7 @@ Pod::Spec.new do |spec|
 
   spec.vendored_frameworks = "HBBasicLib/HBBasicLib.framework"
   spec.requires_arc = true
+  spec.static_framework = true
 
   spec.dependency "Masonry"
   spec.dependency "MJRefresh"
