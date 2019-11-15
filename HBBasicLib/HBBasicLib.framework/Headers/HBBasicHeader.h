@@ -43,7 +43,7 @@ if([[NSFileManager defaultManager] fileExistsAtPath: [URL path]]){ \
 }
 
 ///字体
-#define UIBoldFont(a) [UIFont fontWithName:@"Helvetica-Bold" size:CGFloatAutoFit(a)]
+#define UIBoldFont(a) [UIFont boldSystemFontOfSize:CGFloatAutoFit(a)]
 #define UISystemFont(a) [UIFont systemFontOfSize:CGFloatAutoFit(a)]
 
 #define CGFloatAutoFit(a) round(a*(MIN(kScreenWidth, kScreenHeight)/375.))

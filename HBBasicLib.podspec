@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "HBBasicLib"
-  spec.version      = "1.0.4"
+  spec.version      = "1.0.6"
   spec.summary      = "HBBasic iOS SDK"
 
   spec.description  = "iOS library for HBBasic"
