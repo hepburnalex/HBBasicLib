@@ -34,12 +34,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HBBaseCollectionViewController : BaseADViewController<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, HBBaseCollectionViewControllerDelegate>
 
+@property (nonatomic, strong) UIView *backView;
 @property (nonatomic, strong) HBRefreshCollectionView *collectionView;
 @property (nonatomic, assign) BOOL isShowHeader;
 @property (nonatomic, assign) BOOL isShowFooter;
 
 // 加载布局
 - (HBBaseCollectionViewLayout *)loadCollectionViewLayout:(NSString *)layoutname;
+// 加载布局
+- (void)loadCollectionLayout:(UICollectionViewLayout *)layout;
 // 加载默认布局
 - (void)loadDefaultLayout:(CGSize)size :(UIEdgeInsets)edgeInset;
 // 加载模型
@@ -52,6 +55,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)reloadData;
 // 加载完毕后刷新
 - (void)refreshView:(BOOL)bNoMore;
+
+/* 添加TopView */
+- (void)addTopView:(UIView *)topView height:(CGFloat)height;
 
 @end
 
