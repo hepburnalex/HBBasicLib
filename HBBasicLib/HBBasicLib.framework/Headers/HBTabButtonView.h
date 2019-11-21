@@ -10,11 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HBTabButtonView : UIView
+@interface HBTabButtonView : UIScrollView
 
 @property(nonatomic, assign) CGFloat defaultWidth;
 @property(nonatomic, assign) CGFloat padding;
-@property(nonatomic, assign) CGFloat lineWidth;
+@property(nonatomic, assign) CGFloat lineWidth;             /* 下划线长度 */
 @property(nonatomic, assign) NSInteger currentIndex;
 @property(nonatomic, strong) NSArray *names;
 @property(nonatomic, strong) UIColor *titleColor;           /* 文字颜色 */
@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) UIFont *titleFont;             /* 文字字体 */
 @property(nonatomic, strong) UIFont *selectTitleFont;       /* 选中后的文字字体 */
 @property(nonatomic, strong) void(^OnTabSelect)(NSInteger index);
+
+- (void)reloadData;
 
 @end
 
