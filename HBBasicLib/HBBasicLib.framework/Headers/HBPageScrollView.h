@@ -1,6 +1,6 @@
 //
 //  HBPageScrollView.h
-//  HBBasic
+//  HBBasicLib
 //
 //  Created by Hepburn on 2018/10/18.
 //  Copyright © 2018年 Hepburn. All rights reserved.
@@ -41,6 +41,5 @@ typedef NS_OPTIONS(NSInteger, HBPageScrollDirection) {
 
 - (void)reloadData;
 - (void)cleanScrollOffset;
-
 
 @end

@@ -35,6 +35,7 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/BaseTabBarViewController.h>
 #import <HBBasicLib/HBBaseScrollViewController.h>
 #import <HBBasicLib/HBBaseWebViewController.h>
+#import <HBBasicLib/HBBaseWebWKViewController.h>
 
 /*
  * HBTableView
@@ -75,7 +76,7 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/QRCodeView.h>
 #import <HBBasicLib/MTAlert.h>
 #import <HBBasicLib/HBMasonry.h>
-
+#import <HBBasicLib/CircleProgressView.h>
 
 /*
  * Extend

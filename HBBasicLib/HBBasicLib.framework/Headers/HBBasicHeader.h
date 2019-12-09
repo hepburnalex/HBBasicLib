@@ -1,6 +1,6 @@
 //
 //  Header.h
-//  HBBasic
+//  HBBasicLib
 //
 //  Created by Hepburn on 2019/7/1.
 //  Copyright © 2019 Hepburn. All rights reserved.
@@ -59,6 +59,8 @@ if([[NSFileManager defaultManager] fileExistsAtPath: [URL path]]){ \
 
 #define UICOLORWHITE(x)     [UIColor colorWithWhite:x alpha:1.0]
 
+
+//布局
 #define MAS_TOP(x, y)       make.top.mas_equalTo(x).offset(y)
 #define MAS_LEFT(x, y)      make.left.mas_equalTo(x).offset(y)
 #define MAS_BOTTOM(x, y)    make.bottom.mas_equalTo(x).offset(y)
@@ -89,6 +91,30 @@ if([[NSFileManager defaultManager] fileExistsAtPath: [URL path]]){ \
 
 #define MAS_HORVIEWS(_width, _padding, _views, _root) [HBMasonry mas_HorizontalViews:_width :_padding :_views :_root]
 
+//布局（比例适配）
+#define kMAS_TOP(x, y)              MAS_TOP(x, CGFloatAutoFit(y))
+#define kMAS_LEFT(x, y)             MAS_LEFT(x, CGFloatAutoFit(y))
+#define kMAS_BOTTOM(x, y)           MAS_BOTTOM(x, CGFloatAutoFit(y))
+#define kMAS_RIGHT(x, y)            MAS_RIGHT(x, CGFloatAutoFit(y))
+#define kMAS_CENTERX(x, y)          MAS_CENTERX(x, CGFloatAutoFit(y))
+#define kMAS_CENTERY(x, y)          MAS_CENTERY(x, CGFloatAutoFit(y))
+#define kMAS_WIDTH(x)               MAS_WIDTH(CGFloatAutoFit(x))
+#define kMAS_HEIGHT(x)              MAS_HEIGHT(CGFloatAutoFit(x))
+#define kMAS_SIZE(x)                MAS_SIZE(CGFloatAutoFit(x))
+#define kMAS_SIZES(w, h)            MAS_SIZES(CGFloatAutoFit(w), CGFloatAutoFit(h))
 
+#define kMAS_LARGERWIDTH(x)         MAS_LARGERWIDTH(CGFloatAutoFit(x))
+#define kMAS_LARGERHEIGHT(x)        MAS_LARGERHEIGHT(CGFloatAutoFit(x))
+#define kMAS_LESSWIDTH(x)           MAS_LESSWIDTH(CGFloatAutoFit(x))
+#define kMAS_LESSHEIGHT(x)          MAS_LESSHEIGHT(CGFloatAutoFit(x))
+
+#define kMAS_TOPBOTTOM(x, y)         MAS_TOPBOTTOM(x, CGFloatAutoFit(y))
+#define kMAS_LEFTRIGHT(x, y)         MAS_LEFTRIGHT(x, CGFloatAutoFit(y))
+#define kMAS_TOPLEFT(x, y)           MAS_TOPLEFT(x, CGFloatAutoFit(y))
+#define kMAS_TOPRIGHT(x, y)          MAS_TOPRIGHT(x, CGFloatAutoFit(y))
+#define kMAS_TOPLEFTRIGHT(x, y)      MAS_TOPLEFTRIGHT(x, CGFloatAutoFit(y))
+#define kMAS_BOTTOMLEFT(x, y)        MAS_BOTTOMLEFT(x, CGFloatAutoFit(y))
+#define kMAS_BOTTOMRIGHT(x, y)       MAS_BOTTOMRIGHT(x, CGFloatAutoFit(y))
+#define kMAS_BOTTOMLEFTRIGHT(x, y)   MAS_BOTTOMLEFTRIGHT(x, CGFloatAutoFit(y))
 
 #endif /* Header_h */

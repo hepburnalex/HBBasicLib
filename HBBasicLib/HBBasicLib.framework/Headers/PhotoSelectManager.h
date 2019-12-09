@@ -1,9 +1,9 @@
 //
 //  PhotoSelectManager.h
-//  HBBasic
+//  HBBasicLib
 //
-//  Created by Hepburn Alex on 13-5-30.
-//  Copyright (c) 2013年 Hepburn Alex. All rights reserved.
+//  Created by Hepburn on 2019/10/8.
+//  Copyright © 2019 Hepburn. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

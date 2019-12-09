@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSInteger(^typeOfSectionRow)(NSInteger section, NSInteger row);
 @property (nonatomic, copy) CGRect(^headerFrameForSection)(NSInteger section, CGFloat top);
+@property (nonatomic, copy) CGRect(^footerFrameForSection)(NSInteger section, CGFloat top);
 @property (nonatomic, copy) CGRect(^itemFrameForIndexPath)(NSIndexPath *indexPath, CGFloat top);
 @property (nonatomic, copy) CGRect(^decorationFrameForIndexPath)(NSIndexPath *indexPath, CGFloat top);
 

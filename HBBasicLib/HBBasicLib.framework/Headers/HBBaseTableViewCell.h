@@ -1,9 +1,9 @@
 //
 //  HBBaseTableViewCell.h
-//  HBBasic
+//  HBBasicLib
 //
 //  Created by Hepburn on 2019/6/12.
-//  Copyright © 2019 WZX. All rights reserved.
+//  Copyright © 2019 Hepburn. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

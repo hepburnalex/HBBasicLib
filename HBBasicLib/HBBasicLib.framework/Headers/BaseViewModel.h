@@ -1,9 +1,9 @@
 //
 //  BaseViewModel.h
-//  HBBasic
+//  HBBasicLib
 //
 //  Created by Hepburn on 2019/1/3.
-//  Copyright © 2019 ihope. All rights reserved.
+//  Copyright © 2019 Hepburn. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

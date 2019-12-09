@@ -59,6 +59,9 @@ NS_ASSUME_NONNULL_BEGIN
 /* 添加TopView */
 - (void)addTopView:(UIView *)topView height:(CGFloat)height;
 
+/* 添加BottomView */
+- (void)addBottomView:(UIView *)bottomView height:(CGFloat)height;
+
 @end
 
 NS_ASSUME_NONNULL_END

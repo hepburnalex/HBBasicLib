@@ -1,9 +1,9 @@
 //
 //  NetImageView.h
-//  HBBaseClasses
+//  HBBasicLib
 //
-//  Created by hepburn X on 11-10-28.
-//  Copyright (c) 2011年 __MyCompanyName__. All rights reserved.
+//  Created by hepburn on 11-10-28.
+//  Copyright © 2019 Hepburn. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -27,17 +27,16 @@ typedef enum {
 @property (nonatomic, copy) UIImage *(^OnImageWillLoad)(NetImageView *imageView, UIImage *image);
 @property (nonatomic, copy) void(^OnImageDidLoad)(NetImageView *imageView);
 @property (nonatomic, copy) void(^OnLoadFinish)(NetImageView *imageView);
-@property (nonatomic, copy) void(^OnLoadProgress)(NetImageView *imageView);
 
 @property (nonatomic, readonly) long long fileSize;
 @property (nonatomic, readonly) long long downloadSize;
-@property (nonatomic, readonly) BOOL isShowLoading;
 @property (nonatomic, assign) NetImageType imageType;
 
 @property (nonatomic, strong) id userInfo;
 @property (nonatomic, strong) NSString *localPath;
 @property (nonatomic, strong) UIImage *defaultImage;
 @property (nonatomic, readonly) BOOL isLoading;
+@property (nonatomic, assign) BOOL isShowLoading;
 
 - (void)GetImageByStr:(NSString *)path;
 - (void)Cancel;
