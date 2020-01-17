@@ -15,8 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL shadowHidden UI_APPEARANCE_SELECTOR;
 @property (nonatomic, strong) UIFont *titleFont UI_APPEARANCE_SELECTOR;
 @property (nonatomic, strong) UIColor *titleColor UI_APPEARANCE_SELECTOR;
-@property (nonatomic, readonly) UIImageView *shadowView;
 @property (nonatomic, strong) UIColor *shadowColor UI_APPEARANCE_SELECTOR;
+
+@property (nonatomic, readonly) UIImageView *shadowView;
 
 @end
 

@@ -1,7 +1,7 @@
 //
 //  HBPageScrollView.h
 //  HBBasicLib
-//
+//  轮播图控件
 //  Created by Hepburn on 2018/10/18.
 //  Copyright © 2018年 Hepburn. All rights reserved.
 //
@@ -12,19 +12,34 @@
 
 @protocol HBPageScrollViewDelegate<NSObject>
 
+/// 总页数
+/// @param pageView 轮播图控件
 - (NSInteger)numberOfPagesInScroll:(HBPageScrollView *)pageView;
+
+/// 页面视图
+/// @param pageView 轮播图控件
+/// @param index 页面索引
 - (UIView *)scrollPage:(HBPageScrollView *)pageView viewAtIndex:(NSInteger)index;
 
 @optional
+
+/// 页面显示事件
+/// @param pageView 轮播图控件
+/// @param view 显示的视图
+/// @param isManual YES手动翻页 NO自动翻页
 - (void)scrollPage:(HBPageScrollView *)pageView showPage:(UIView *)view manual:(BOOL)isManual;
+
+/// 页面隐藏事件
+/// @param pageView 轮播图控件
+/// @param view 隐藏的视图
 - (void)scrollPage:(HBPageScrollView *)pageView hidePage:(UIView *)view;
 
 @end
 
-typedef enum {
-    HBPageScrollType_Normal,
-    HBPageScrollType_Scale
-} HBPageScrollType;
+typedef NS_OPTIONS(NSInteger, HBPageScrollType) {
+    HBPageScrollType_Normal   = 0,
+    HBPageScrollType_Scale    = 1
+};
 
 typedef NS_OPTIONS(NSInteger, HBPageScrollDirection) {
     HBPageScrollDirection_Vertical   = 1 << 0,
@@ -33,13 +48,37 @@ typedef NS_OPTIONS(NSInteger, HBPageScrollDirection) {
 
 @interface HBPageScrollView : UIView
 
+@property (nonatomic, strong) UIScrollView *scrollView;
+
+/// 代理事件
 @property (nonatomic, assign) id<HBPageScrollViewDelegate> delegate;
-@property (nonatomic, assign) NSInteger currentIndex;
+
+/// 轮播图展示形式
 @property (nonatomic, assign) HBPageScrollType pageType;
+
+/// 轮播图方向
 @property (nonatomic, assign) HBPageScrollDirection pageDirection;
+
+/// 弹性边界
+@property (nonatomic, assign) BOOL bounces;
+
+/// 当前页数
+@property (nonatomic, assign) NSInteger currentIndex;
+
+/// 总页数
 @property (nonatomic, readonly) NSInteger pageCount;
 
+/// 重新加载
 - (void)reloadData;
+
+/// 清除滑动偏移
 - (void)cleanScrollOffset;
+
+/// 开始自动翻页
+/// @param interval 翻页时间间隔
+- (void)startAutoScroll:(CGFloat)interval;
+
+/// 停止滚动
+- (void)stopAutoScroll;
 
 @end

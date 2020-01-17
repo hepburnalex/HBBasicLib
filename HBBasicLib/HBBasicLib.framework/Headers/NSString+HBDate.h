@@ -28,9 +28,10 @@ typedef enum {
 @property (nonatomic, readonly) NSString *HHMMSSTime;
 @property (nonatomic, readonly) NSString *MMDDHHMMTime;
 @property (nonatomic, readonly) NSString *MMDDTime;
+/// 短时间显示（一小时内显示 1小时内，当天显示HH:mm，更早的显示MM-dd）
 @property (nonatomic, readonly) NSString *shortDateTime;
-//Encrypt
-@property (nonatomic, readonly) NSString *MD5String;
+/// 精简时间显示（当天显示HH:mm，更早的显示yyyy-MM-dd HH:mm）
+@property (nonatomic, readonly) NSString *simplifiedDateTime;
 
 + (NSDate *)dateTimeFromString:(NSString *)timeStr;
 + (NSString *)stringFromDateTime:(NSDate *)datetime;

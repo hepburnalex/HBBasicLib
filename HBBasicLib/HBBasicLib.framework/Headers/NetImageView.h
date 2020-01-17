@@ -1,7 +1,7 @@
 //
 //  NetImageView.h
 //  HBBasicLib
-//
+//  网络图片加载
 //  Created by hepburn on 11-10-28.
 //  Copyright © 2019 Hepburn. All rights reserved.
 //
@@ -20,12 +20,15 @@ typedef enum {
     NetImageType_Right,
 } NetImageType;
 
-@interface NetImageView : UIImageView {
-    UIActivityIndicatorView *mActView;
-}
+@interface NetImageView : UIImageView
 
+/// 图片将要加载显示时的回调
 @property (nonatomic, copy) UIImage *(^OnImageWillLoad)(NetImageView *imageView, UIImage *image);
+
+/// 图片加载显示完毕后的回调
 @property (nonatomic, copy) void(^OnImageDidLoad)(NetImageView *imageView);
+
+/// 图片下载成功的回调
 @property (nonatomic, copy) void(^OnLoadFinish)(NetImageView *imageView);
 
 @property (nonatomic, readonly) long long fileSize;
@@ -38,12 +41,26 @@ typedef enum {
 @property (nonatomic, readonly) BOOL isLoading;
 @property (nonatomic, assign) BOOL isShowLoading;
 
-- (void)GetImageByStr:(NSString *)path;
-- (void)Cancel;
+/// 请求图片链接
+/// @param urlstr 图片链接
+- (void)loadImageByUrl:(NSString *)urlstr;
 
-+ (NSString *)GetLocalPathOfUrl:(NSString *)urlstr;
+/// 取消请求
+- (void)cancel;
+
+/// 获取图片本地路径
+/// @param urlstr 图片链接
++ (NSString *)getLocalPathOfUrl:(NSString *)urlstr;
+
+/// 获取图片缓存目录
 + (NSString *)imageCachePath;
+
+/// 设置图片缓存目录
+/// @param path 缓存路径
 + (void)setImageCachePath:(NSString *)path;
+
+/// 注册图片加载时显示的loading视图
+/// @param loadViewName 加载视图的类名
 + (void)registerLoadingView:(NSString *)loadViewName;
 
 @end

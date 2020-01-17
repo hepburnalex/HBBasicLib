@@ -1,7 +1,7 @@
 //
 //  GifImageView.h
-//  HBBaseClasses
-//
+//  HBBasicLib
+//  GIF图片加载
 //  Created by Hepburn on 2019/6/5.
 //  Copyright © 2019 Hepburn. All rights reserved.
 //
@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GifImageView : UIImageView
 
-- (void)LoadGifImage:(NSString *)path;
+- (void)loadGifImage:(NSString *)path;
 + (void)makeGif:(NSArray<GifImageInfo *> *)images output:(NSString *)path;
 + (void)makeVideoGif:(NSString *)videoPath start:(float)startTime duration:(float)duration output:(NSString *)path completion:(void (^)(void))block;
 @end

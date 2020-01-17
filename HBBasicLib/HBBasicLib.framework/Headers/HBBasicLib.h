@@ -27,6 +27,7 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/HBFaceIDManager.h>
 #import <HBBasicLib/HBLocalNotificationManager.h>
 #import <HBBasicLib/PhotoSelectManager.h>
+#import <HBBasicLib/HBVideoManager.h>
 
 /*
  * BaseView
@@ -68,8 +69,11 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/HBSearchBar.h>
 #import <HBBasicLib/HBNavigationBar.h>
 #import <HBBasicLib/HBTextView.h>
+#import <HBBasicLib/HBTextField.h>
 #import <HBBasicLib/HBPageScrollView.h>
 #import <HBBasicLib/HBTabButtonView.h>
+#import <HBBasicLib/HBTabNavSelectView.h>
+#import <HBBasicLib/HBTabScrollSelectView.h>
 #import <HBBasicLib/HBCheckCodeView.h>
 #import <HBBasicLib/NetImageView.h>
 #import <HBBasicLib/GifImageView.h>
@@ -77,6 +81,8 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/MTAlert.h>
 #import <HBBasicLib/HBMasonry.h>
 #import <HBBasicLib/CircleProgressView.h>
+#import <HBBasicLib/HBCircleProgress.h>
+#import <HBBasicLib/HBDateTimeSelectView.h>
 
 /*
  * Extend
@@ -84,6 +90,7 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/UIImage+Extend.h>
 #import <HBBasicLib/HBColor.h>
 #import <HBBasicLib/NSString+HBDate.h>
+#import <HBBasicLib/NSString+HBEncrypt.h>
 #import <HBBasicLib/NSDate+HBCalendar.h>
 #import <HBBasicLib/NSString+HBValidate.h>
 #import <HBBasicLib/HBCleanCache.h>

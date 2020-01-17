@@ -13,11 +13,18 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HBBaseWebViewController : BaseADViewController<UIWebViewDelegate>
 
 @property (nonatomic, strong) UIWebView *webView;
+/// 加载网址
 @property (nonatomic, strong) NSString *urlStr;
+/// 加载网页html
 @property (nonatomic, strong) NSString *htmlStr;
+/// 是否锁定标题
 @property (nonatomic, assign) BOOL isLockTitle;
+/// 是否本地缓存
 @property (nonatomic, assign) BOOL isLocalCache;
+/// 是否启用弹性边界
 @property (nonatomic, assign) BOOL isBounceEnable;
+/// 是否显示loading
+@property (nonatomic, assign) BOOL isShowLoading;
 
 /// 网页格式化
 /// @param content 网页内容

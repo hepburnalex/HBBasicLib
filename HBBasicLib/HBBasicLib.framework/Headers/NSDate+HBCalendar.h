@@ -21,6 +21,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSInteger firstWeekDayInMonth;
 @property (nonatomic, readonly) NSInteger numberOfDaysInMonth;
 @property (nonatomic, readonly) NSString *weekTitle;
+/// 农历月
+@property (nonatomic, readonly) NSString *chineseMonth;
+/// 农历日
+@property (nonatomic, readonly) NSString *chineseDay;
 /// 获得当前 NSDate 对象的上个月的某一天（此处定为15号）的 NSDate 对象
 @property (nonatomic, readonly) NSDate * previousMonthDate;
 /// 获得当前 NSDate 对象的下个月的某一天（此处定为15号）的 NSDate 对象

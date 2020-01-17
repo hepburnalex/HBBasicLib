@@ -11,14 +11,29 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HBBaseWebWKViewController : BaseADViewController
+@protocol HBBaseWebWKViewControllerDelegate <NSObject>
 
-@property (nonatomic, strong) NSString *urlScheme;
+- (void)webViewJSActionSelect:(NSString *)name params:(nullable id)params;
+
+@end
+
+@interface HBBaseWebWKViewController : BaseADViewController<HBBaseWebWKViewControllerDelegate>
+
+@property (nonatomic, strong) NSArray *JSActionNames;
+@property (nonatomic, assign) BOOL isJSCoreEnable;
 @property (nonatomic, strong) WKWebView *webView;
+/// 加载网址
 @property (nonatomic, strong) NSString *urlStr;
+/// 是否锁定标题
 @property (nonatomic, assign) BOOL isLockTitle;
+/// 是否本地缓存
 @property (nonatomic, assign) BOOL isLocalCache;
+/// 是否启用弹性边界
 @property (nonatomic, assign) BOOL isBounceEnable;
+/// 是否显示loading
+@property (nonatomic, assign) BOOL isShowLoading;
+/// 监听的urlScheme
+@property (nonatomic, strong) NSString *urlScheme;
 
 /// 网页格式化
 /// @param content 网页内容

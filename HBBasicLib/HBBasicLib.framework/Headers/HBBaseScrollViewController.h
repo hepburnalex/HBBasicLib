@@ -13,8 +13,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HBBaseScrollViewController : BaseADViewController
 
 @property (nonatomic, strong) UIScrollView *scrollView;
+
+/// 容器视图
 @property (nonatomic, strong) UIView *containerView;
 
+/// 添加顶部固定视图
+/// @param topView 顶部视图
+/// @param height 高度
 - (void)addTopView:(UIView *)topView height:(CGFloat)height;
 
 @end

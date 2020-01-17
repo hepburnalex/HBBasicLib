@@ -55,8 +55,15 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)cleanModelsForSection:(NSInteger)section;
 - (void)cleanAllModels;
 
-/* 添加TopView */
+/// 添加TopView
+/// @param topView 顶部View
+/// @param height 高度
 - (void)addTopView:(UIView *)topView height:(CGFloat)height;
+
+/// 添加BottomView
+/// @param bottomView 底部View
+/// @param height 高度
+- (void)addBottomView:(UIView *)bottomView height:(CGFloat)height;
 
 @end
 

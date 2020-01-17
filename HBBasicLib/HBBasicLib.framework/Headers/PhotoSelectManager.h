@@ -1,7 +1,7 @@
 //
 //  PhotoSelectManager.h
 //  HBBasicLib
-//
+//  拍照/相册管理
 //  Created by Hepburn on 2019/10/8.
 //  Copyright © 2019 Hepburn. All rights reserved.
 //
@@ -19,6 +19,6 @@
 @property (nonatomic, assign) BOOL isFrontCamera;
 @property (nonatomic, assign) float imageQuality;
 
-- (BOOL)TakePhoto:(BOOL)bCamera;
+- (BOOL)takePhoto:(BOOL)bCamera;
 
 @end

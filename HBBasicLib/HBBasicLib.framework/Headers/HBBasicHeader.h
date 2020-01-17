@@ -103,10 +103,10 @@ if([[NSFileManager defaultManager] fileExistsAtPath: [URL path]]){ \
 #define kMAS_SIZE(x)                MAS_SIZE(CGFloatAutoFit(x))
 #define kMAS_SIZES(w, h)            MAS_SIZES(CGFloatAutoFit(w), CGFloatAutoFit(h))
 
-#define kMAS_LARGERWIDTH(x)         MAS_LARGERWIDTH(CGFloatAutoFit(x))
-#define kMAS_LARGERHEIGHT(x)        MAS_LARGERHEIGHT(CGFloatAutoFit(x))
-#define kMAS_LESSWIDTH(x)           MAS_LESSWIDTH(CGFloatAutoFit(x))
-#define kMAS_LESSHEIGHT(x)          MAS_LESSHEIGHT(CGFloatAutoFit(x))
+#define kMAS_LARGERWIDTH(x)         MAS_LARGERWIDTH(@(CGFloatAutoFit(x)))
+#define kMAS_LARGERHEIGHT(x)        MAS_LARGERHEIGHT(@(CGFloatAutoFit(x)))
+#define kMAS_LESSWIDTH(x)           MAS_LESSWIDTH(@(CGFloatAutoFit(x)))
+#define kMAS_LESSHEIGHT(x)          MAS_LESSHEIGHT(@(CGFloatAutoFit(x)))
 
 #define kMAS_TOPBOTTOM(x, y)         MAS_TOPBOTTOM(x, CGFloatAutoFit(y))
 #define kMAS_LEFTRIGHT(x, y)         MAS_LEFTRIGHT(x, CGFloatAutoFit(y))
