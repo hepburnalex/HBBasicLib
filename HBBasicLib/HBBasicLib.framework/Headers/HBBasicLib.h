@@ -37,6 +37,7 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/HBBaseScrollViewController.h>
 #import <HBBasicLib/HBBaseWebViewController.h>
 #import <HBBasicLib/HBBaseWebWKViewController.h>
+#import <HBBasicLib/HBBasePageViewController.h>
 
 /*
  * HBTableView
@@ -83,6 +84,7 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/CircleProgressView.h>
 #import <HBBasicLib/HBCircleProgress.h>
 #import <HBBasicLib/HBDateTimeSelectView.h>
+#import <HBBasicLib/HBMoviePlayerView.h>
 
 /*
  * Extend

@@ -49,6 +49,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 重新加载页面
 - (void)reloadData;
+/// 设置显示的tab
+- (void)setCurrentIndex:(NSInteger)currentIndex animated:(BOOL)animated;
 
 @end
 
