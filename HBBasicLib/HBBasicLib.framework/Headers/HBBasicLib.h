@@ -28,16 +28,19 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/HBLocalNotificationManager.h>
 #import <HBBasicLib/PhotoSelectManager.h>
 #import <HBBasicLib/HBVideoManager.h>
+#import <HBBasicLib/HBLanguageManager.h>
 
 /*
  * BaseView
  */
 #import <HBBasicLib/BaseADViewController.h>
 #import <HBBasicLib/BaseTabBarViewController.h>
+#import <HBBasicLib/BaseNavigationController.h>
 #import <HBBasicLib/HBBaseScrollViewController.h>
 #import <HBBasicLib/HBBaseWebViewController.h>
 #import <HBBasicLib/HBBaseWebWKViewController.h>
 #import <HBBasicLib/HBBasePageViewController.h>
+#import <HBBasicLib/HBBaseVideoViewController.h>
 
 /*
  * HBTableView
@@ -85,6 +88,7 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/HBCircleProgress.h>
 #import <HBBasicLib/HBDateTimeSelectView.h>
 #import <HBBasicLib/HBMoviePlayerView.h>
+#import <HBBasicLib/HBPickerSelectView.h>
 
 /*
  * Extend

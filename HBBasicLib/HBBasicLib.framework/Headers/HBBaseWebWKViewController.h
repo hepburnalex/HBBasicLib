@@ -19,11 +19,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HBBaseWebWKViewController : BaseADViewController<HBBaseWebWKViewControllerDelegate>
 
+/// JS交互
 @property (nonatomic, strong) NSArray *JSActionNames;
 @property (nonatomic, assign) BOOL isJSCoreEnable;
+/// WebView
 @property (nonatomic, strong) WKWebView *webView;
 /// 加载网址
 @property (nonatomic, strong) NSString *urlStr;
+/// 在新页面显示链接
+@property (nonatomic, strong) void(^OnShowNextView)(NSString *urlstr);
 /// 是否锁定标题
 @property (nonatomic, assign) BOOL isLockTitle;
 /// 是否本地缓存
@@ -32,6 +36,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL isBounceEnable;
 /// 是否显示loading
 @property (nonatomic, assign) BOOL isShowLoading;
+/// 是否可以缩放
+@property (nonatomic, assign) BOOL isScaleEnable;
 /// 监听的urlScheme
 @property (nonatomic, strong) NSString *urlScheme;
 
@@ -48,6 +54,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 获取网页的内容
 - (void)getJSHTML:(void(^)(NSString *result))block;
+
+/// 执行JS方法
+- (void)runJSAction:(NSString *)jsaction block:(void(^)(NSString *result))block;
 
 /// web请求
 /// @param urlstr 请求地址（优先）

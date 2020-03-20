@@ -12,6 +12,9 @@
 
 @property (nonatomic, strong) UIButton *checkBtn;
 
+/// 倒计时单位（默认秒）
+@property (nonatomic, strong) NSString *secondUnit;
+
 /// 显示默认文字
 @property (nonatomic, strong) NSString *defaultText;
 

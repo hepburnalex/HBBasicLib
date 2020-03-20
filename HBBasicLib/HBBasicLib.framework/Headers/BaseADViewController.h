@@ -55,6 +55,7 @@ typedef enum {
 + (void)registerEmptyView:(NSString *)emptyViewName;
 
 // NavBarItem
+- (void)addLeftButtonItems:(NSArray<UIImage *> *)images target:(id)target action:(SEL)action;
 - (void)addRightButtonItem:(UIImage *)image target:(id)target action:(SEL)action;
 - (void)addRightButtonItems:(NSArray<UIImage *> *)images target:(id)target action:(SEL)action;
 - (void)addRightTextItem:(NSString *)name target:(id)target action:(SEL)action;
@@ -88,4 +89,6 @@ typedef enum {
 - (void)showChildViewController:(BaseADViewController *)newController frame:(CGRect)frame;
 - (void)addChildViewControllers:(NSArray<BaseADViewController *> *)childControllers edgeInset:(UIEdgeInsets)edgeInset;
 - (void)showChildViewControllerIndex:(NSInteger)index;
+- (void)showChildViewControllerIndex:(NSInteger)index frame:(CGRect)frame;
+
 @end
