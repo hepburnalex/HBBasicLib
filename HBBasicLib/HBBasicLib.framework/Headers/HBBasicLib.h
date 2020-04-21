@@ -29,6 +29,7 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/PhotoSelectManager.h>
 #import <HBBasicLib/HBVideoManager.h>
 #import <HBBasicLib/HBLanguageManager.h>
+#import <HBBasicLib/HBLocationManager.h>
 
 /*
  * BaseView

@@ -22,4 +22,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface UITextField (HBTextField)
+
+/// 占位符颜色
+@property (nonatomic, strong) UIColor *placeholderColor;
+
+@end
+
 NS_ASSUME_NONNULL_END

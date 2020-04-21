@@ -37,6 +37,8 @@ typedef enum {
 @property (nonatomic, weak) UIViewController *rootCtrl;
 /// 当使用registerEmptyView注册了为空的提示框视图，该属性不为空
 @property (nonatomic, strong) UIView *emptyView;
+/// 回调处理事件
+@property (nonatomic, strong) void(^onActionSelect)(void);
 
 /// 注册返回按钮图，否则显示名字为 lnr_back 的图
 /// @param image 返回按钮图
@@ -54,12 +56,20 @@ typedef enum {
 /// @param emptyViewName 提示视图的类名
 + (void)registerEmptyView:(NSString *)emptyViewName;
 
+/// 注册背景色
+/// @param color 背景色
++ (void)registerBackColor:(UIColor *)color;
+
 // NavBarItem
 - (void)addLeftButtonItems:(NSArray<UIImage *> *)images target:(id)target action:(SEL)action;
+- (void)addLeftTextItem:(NSString *)name target:(id)target action:(SEL)action;
+- (void)addLeftTextItem:(NSString *)name font:(UIFont *)font color:(UIColor *)color target:(id)target action:(SEL)action;
+
 - (void)addRightButtonItem:(UIImage *)image target:(id)target action:(SEL)action;
 - (void)addRightButtonItems:(NSArray<UIImage *> *)images target:(id)target action:(SEL)action;
 - (void)addRightTextItem:(NSString *)name target:(id)target action:(SEL)action;
 - (void)addRightTextItem:(NSString *)name font:(UIFont *)font color:(UIColor *)color target:(id)target action:(SEL)action;
+
 - (void)addBackImageButton;
 - (void)addBackImageButton:(UIImage *)image;
 - (void)OnBackClick;

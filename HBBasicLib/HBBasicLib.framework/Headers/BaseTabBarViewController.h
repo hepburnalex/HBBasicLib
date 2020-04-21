@@ -18,12 +18,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIColor *tabItemSelectedColor;
 @property (nonatomic, strong) UIColor *tabBackColor;
 @property (nonatomic, readonly) NSArray<NSString *> *controllerNames;
-@property (nonatomic, assign) BOOL isInteractivePopEnable;
+@property (nonatomic, assign) BOOL isInteractivePopEnable;              //开启滑动返回
+@property (nonatomic, assign) BOOL isAutoImageRendering;                //图像自动渲染
 
--(void)createTabBarViewController:(NSArray<NSString *> *)viewControllerNames
-                           titles:(nullable NSArray *)titles
-                       imageNames:(NSArray *)imageNames
-                 selectImageNames:(NSArray *)selectImageNames;
+- (void)createTabBarViewController:(NSArray<NSString *> *)viewControllerNames
+                            titles:(nullable NSArray *)titles
+                        imageNames:(NSArray *)imageNames
+                  selectImageNames:(NSArray *)selectImageNames;
 
 @end
 

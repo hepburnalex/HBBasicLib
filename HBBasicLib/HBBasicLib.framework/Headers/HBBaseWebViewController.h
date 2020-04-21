@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 加载网页html
 @property (nonatomic, strong) NSString *htmlStr;
 /// 在新页面显示链接
-@property (nonatomic, strong) void(^OnShowNextView)(NSString *urlstr);
+@property (nonatomic, strong) BOOL(^OnShowNextView)(NSString *urlstr);
 /// 是否锁定标题
 @property (nonatomic, assign) BOOL isLockTitle;
 /// 是否本地缓存

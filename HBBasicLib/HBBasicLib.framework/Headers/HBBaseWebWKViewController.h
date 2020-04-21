@@ -13,11 +13,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol HBBaseWebWKViewControllerDelegate <NSObject>
 
+/// JS调用OC事件
+/// @param name 方法名
+/// @param params 参数
 - (void)webViewJSActionSelect:(NSString *)name params:(nullable id)params;
+
+/// webView开始加载url
+/// @param urlStr 请求url
+- (BOOL)webViewShouldStartLoadWithUrl:(NSString *)urlStr;
+
+/// 处理URL
+- (void)applicationOpenUrl:(NSURL *)url;
 
 @end
 
-@interface HBBaseWebWKViewController : BaseADViewController<HBBaseWebWKViewControllerDelegate>
+@interface HBBaseWebWKViewController : BaseADViewController<HBBaseWebWKViewControllerDelegate, WKNavigationDelegate, WKScriptMessageHandler>
 
 /// JS交互
 @property (nonatomic, strong) NSArray *JSActionNames;
@@ -26,8 +36,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) WKWebView *webView;
 /// 加载网址
 @property (nonatomic, strong) NSString *urlStr;
-/// 在新页面显示链接
-@property (nonatomic, strong) void(^OnShowNextView)(NSString *urlstr);
 /// 是否锁定标题
 @property (nonatomic, assign) BOOL isLockTitle;
 /// 是否本地缓存
@@ -40,6 +48,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL isScaleEnable;
 /// 监听的urlScheme
 @property (nonatomic, strong) NSString *urlScheme;
+/// 在新页面显示链接
+@property (nonatomic, strong) BOOL(^OnShowNextView)(NSString *urlstr);
+/// JS调用OC事件
+@property (nonatomic, strong) void(^OnWebJSActionSelect)(HBBaseWebWKViewController *ctrl, NSString *name, id params);
 
 /// 网页格式化
 /// @param content 网页内容

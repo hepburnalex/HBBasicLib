@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)OnTableCellCreate:(UITableViewCell *)cell;
 /* 加载Cell的model时的事件 */
 - (void)OnTableCellLoad:(UITableViewCell *)cell index:(NSIndexPath *)indexPath model:(id)model;
+/* 删除Cell的事件 */
+- (void)OnTableCellDelete:(NSIndexPath *)indexPath :(id)model;
 /* 重新加载 */
 - (void)reloadTable;
 /* 加载更多 */
@@ -36,6 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL isShowFooter;
 @property (nonatomic, assign) BOOL isShowSeparatorLine;
 @property (nonatomic, assign) BOOL isShowCorner;
+@property (nonatomic, assign) BOOL isEditEnable;
 @property (nonatomic, assign) NSInteger page;
 @property (nonatomic, assign) CGFloat sectionHeaderHeight;
 @property (nonatomic, assign) CGFloat sectionFooterHeight;

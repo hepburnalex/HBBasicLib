@@ -22,6 +22,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param height 高度
 - (void)addTopView:(UIView *)topView height:(CGFloat)height;
 
+/// 添加BottomView
+/// @param bottomView 底部视图
+/// @param height 高度
+- (void)addBottomView:(UIView *)bottomView height:(CGFloat)height;
+
 @end
 
 NS_ASSUME_NONNULL_END
