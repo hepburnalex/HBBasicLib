@@ -6,7 +6,7 @@
 //  Copyright © 2019 Hepburn. All rights reserved.
 //
 
-#import "BaseADViewController.h"
+#import "HBBaseViewController.h"
 #import "HBRefreshTableView.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface HBBaseTableViewController : BaseADViewController<UITableViewDelegate, UITableViewDataSource, HBBaseTableViewControllerDelegate>
+@interface HBBaseTableViewController : HBBaseViewController<UITableViewDelegate, UITableViewDataSource, HBBaseTableViewControllerDelegate>
 
 @property (nonatomic, strong) UIView *backView;
 @property (nonatomic, strong) HBRefreshTableView *tableView;
@@ -57,16 +57,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)loadModels:(NSArray *)models forSection:(NSInteger)section;
 - (void)cleanModelsForSection:(NSInteger)section;
 - (void)cleanAllModels;
-
-/// 添加TopView
-/// @param topView 顶部View
-/// @param height 高度
-- (void)addTopView:(UIView *)topView height:(CGFloat)height;
-
-/// 添加BottomView
-/// @param bottomView 底部View
-/// @param height 高度
-- (void)addBottomView:(UIView *)bottomView height:(CGFloat)height;
 
 @end
 

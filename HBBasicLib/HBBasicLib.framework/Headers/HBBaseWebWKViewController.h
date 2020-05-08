@@ -6,7 +6,7 @@
 //  Copyright © 2019 Hepburn. All rights reserved.
 //
 
-#import <HBBasicLib/HBBasicLib.h>
+#import <HBBasicLib/HBBaseViewController.h>
 #import <WebKit/WebKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface HBBaseWebWKViewController : BaseADViewController<HBBaseWebWKViewControllerDelegate, WKNavigationDelegate, WKScriptMessageHandler>
+@interface HBBaseWebWKViewController : HBBaseViewController<HBBaseWebWKViewControllerDelegate, WKNavigationDelegate, WKScriptMessageHandler>
 
 /// JS交互
 @property (nonatomic, strong) NSArray *JSActionNames;

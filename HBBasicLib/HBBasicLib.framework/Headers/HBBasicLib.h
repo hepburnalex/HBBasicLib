@@ -37,8 +37,9 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/BaseADViewController.h>
 #import <HBBasicLib/BaseTabBarViewController.h>
 #import <HBBasicLib/BaseNavigationController.h>
+#import <HBBasicLib/HBBaseViewController.h>
 #import <HBBasicLib/HBBaseScrollViewController.h>
-#import <HBBasicLib/HBBaseWebViewController.h>
+//#import <HBBasicLib/HBBaseWebViewController.h>
 #import <HBBasicLib/HBBaseWebWKViewController.h>
 #import <HBBasicLib/HBBasePageViewController.h>
 #import <HBBasicLib/HBBaseVideoViewController.h>
@@ -100,6 +101,7 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/NSString+HBEncrypt.h>
 #import <HBBasicLib/NSDate+HBCalendar.h>
 #import <HBBasicLib/NSString+HBValidate.h>
+#import <HBBasicLib/NSMutableAttributedString+Extend.h>
 #import <HBBasicLib/HBCleanCache.h>
 #import <HBBasicLib/HBBasicHeader.h>
 

@@ -6,7 +6,7 @@
 //  Copyright © 2018 Hepburn. All rights reserved.
 //
 
-#import "BaseADViewController.h"
+#import "HBBaseViewController.h"
 #import "HBRefreshCollectionView.h"
 #import "HBBaseCollectionViewLayout.h"
 #import "HBBaseCollectionReusableView.h"
@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface HBBaseCollectionViewController : BaseADViewController<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, HBBaseCollectionViewControllerDelegate>
+@interface HBBaseCollectionViewController : HBBaseViewController<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, HBBaseCollectionViewControllerDelegate>
 
 @property (nonatomic, strong) UIView *backView;
 @property (nonatomic, strong) HBRefreshCollectionView *collectionView;
@@ -55,12 +55,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)reloadData;
 // 加载完毕后刷新
 - (void)refreshView:(BOOL)bNoMore;
-
-/* 添加TopView */
-- (void)addTopView:(UIView *)topView height:(CGFloat)height;
-
-/* 添加BottomView */
-- (void)addBottomView:(UIView *)bottomView height:(CGFloat)height;
 
 @end
 
