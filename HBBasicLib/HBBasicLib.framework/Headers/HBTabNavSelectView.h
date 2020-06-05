@@ -1,7 +1,7 @@
 //
 //  HBTabNavSelectView.h
 //  HBBasicLib
-//  tab选择控件
+//
 //  Created by Hepburn on 2019/12/16.
 //  Copyright © 2019 Hepburn. All rights reserved.
 //
@@ -10,6 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// tab选择控件
 @interface HBTabNavSelectView : UIView
 
 /// 下划线
@@ -31,6 +32,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIColor *itemColor;
 /// 选中颜色
 @property (nonatomic, strong) UIColor *itemSelectedColor;
+/// 背景图
+@property (nonatomic, strong) UIImage *backImage;
+/// 选中后背景图
+@property (nonatomic, strong) UIImage *selectBackImage;
 
 /// 当前选中的index（默认值为0，选择第一个）
 @property (nonatomic, assign) NSInteger currentIndex;

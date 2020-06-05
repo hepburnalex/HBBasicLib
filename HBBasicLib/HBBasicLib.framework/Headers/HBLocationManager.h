@@ -17,6 +17,7 @@ typedef enum {
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 定位服务
 @interface HBLocationManager : NSObject<CLLocationManagerDelegate>
 
 @property (nonatomic, assign) HBLocationManagerType locationType;

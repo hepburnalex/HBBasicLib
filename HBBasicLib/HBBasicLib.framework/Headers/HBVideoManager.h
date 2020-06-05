@@ -1,7 +1,7 @@
 //
 //  HBVideoManager.h
 //  HBBasicLib
-//  视频编辑
+//
 //  Created by Hepburn on 2019/12/10.
 //  Copyright © 2019 Hepburn. All rights reserved.
 //
@@ -10,6 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 视频编辑
 @interface HBVideoManager : NSObject
 
 @property (nonatomic, assign) CGSize videoSize;

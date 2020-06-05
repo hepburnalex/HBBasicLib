@@ -1,7 +1,7 @@
 //
 //  HBLocalNotificationManager.h
 //  HBBasicLib
-//  本地通知管理
+//
 //  Created by Hepburn on 2019/10/12.
 //  Copyright © 2019 Hepburn. All rights reserved.
 //
@@ -10,6 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 本地通知管理
 @interface HBLocalNotificationManager : NSObject
 
 /// 初始化

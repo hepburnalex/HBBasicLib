@@ -1,7 +1,7 @@
 //
 //  HBTabButtonView.h
 //  HBBasicLib
-//  顶部tab切换控件
+//
 //  Created by Hepburn on 2019/1/16.
 //  Copyright © 2019 Hepburn. All rights reserved.
 //
@@ -10,6 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 顶部tab切换控件
 @interface HBTabButtonView : UIScrollView
 
 /// tab默认宽度

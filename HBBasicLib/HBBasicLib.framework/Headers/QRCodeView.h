@@ -1,13 +1,14 @@
 //
 //  QRCodeView.h
 //  HBBasicLib
-//  显示二维码的控件
+//
 //  Created by Hepburn on 2018/7/25.
 //  Copyright © 2018年 Hepburn. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
+/// 显示二维码的控件
 @interface QRCodeView : UIImageView
 
 /// 显示二维码

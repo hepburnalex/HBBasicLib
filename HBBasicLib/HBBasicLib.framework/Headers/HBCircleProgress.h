@@ -10,6 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 环形进度条动画
 @interface HBCircleProgress : UIView
 
 //图形定制

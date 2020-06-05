@@ -10,6 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 单列选择控件
 @interface HBPickerSelectView : UIView<UIPickerViewDelegate, UIPickerViewDataSource>
 
 /// 选中的文字

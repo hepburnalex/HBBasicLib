@@ -1,7 +1,7 @@
 //
 //  HBFaceIDManager.h
 //  HBBasicLib
-//  人脸/指纹扫描管理
+//
 //  Created by Hepburn on 2019/10/8.
 //  Copyright © 2019 Hepburn. All rights reserved.
 //
@@ -10,6 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 人脸/指纹扫描管理
 @interface HBFaceIDManager : NSObject
 
 @property (nonatomic, assign) BOOL isFaceIDEnable;

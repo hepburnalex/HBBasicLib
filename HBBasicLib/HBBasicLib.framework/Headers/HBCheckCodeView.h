@@ -1,13 +1,14 @@
 //
 //  HBCheckCodeView.h
 //  HBBasicLib
-//  验证码控件
+//
 //  Created by Hepburn on 2019/1/2.
 //  Copyright © 2019 Hepburn. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
+/// 验证码控件
 @interface HBCheckCodeView : UIView
 
 @property (nonatomic, strong) UIButton *checkBtn;

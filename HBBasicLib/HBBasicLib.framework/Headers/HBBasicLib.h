@@ -102,6 +102,7 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/NSDate+HBCalendar.h>
 #import <HBBasicLib/NSString+HBValidate.h>
 #import <HBBasicLib/NSMutableAttributedString+Extend.h>
+#import <HBBasicLib/NSArray+Extend.h>
 #import <HBBasicLib/HBCleanCache.h>
 #import <HBBasicLib/HBBasicHeader.h>
 

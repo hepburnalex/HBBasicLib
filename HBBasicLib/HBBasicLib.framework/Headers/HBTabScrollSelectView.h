@@ -1,7 +1,7 @@
 //
 //  HBTabScrollSelectView.h
 //  HBBasicLib
-//  tab滚动选择控件
+//
 //  Created by Hepburn on 2019/12/3.
 //  Copyright © 2019 Hepburn. All rights reserved.
 //
@@ -10,6 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// tab滚动选择控件
 @interface HBTabScrollSelectView : UIScrollView
 
 @property (nonatomic, strong) UIView *backView;
@@ -29,6 +30,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIColor *itemColor;
 /// 文字选中颜色
 @property (nonatomic, strong) UIColor *itemSelectedColor;
+
+/// 背景图
+@property (nonatomic, strong) UIImage *backImage;
+/// 选中后背景图
+@property (nonatomic, strong) UIImage *selectBackImage;
 
 /// tab之间的间距
 @property (nonatomic, assign) CGFloat spaceWidth;

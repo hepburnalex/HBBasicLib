@@ -1,13 +1,14 @@
 //
 //  HBMoviePlayerView.h
 //  HBBasicLib
-//  视频播放控件
+//
 //  Created by Hepburn on 2019/12/10.
 //  Copyright © 2019 Hepburn. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
+/// 视频播放控件
 @interface HBMoviePlayerView : UIView
 
 /// 加载视频

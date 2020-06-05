@@ -1,7 +1,7 @@
 //
 //  GifImageView.h
 //  HBBasicLib
-//  GIF图片加载
+//
 //  Created by Hepburn on 2019/6/5.
 //  Copyright © 2019 Hepburn. All rights reserved.
 //
@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - GifImageView
 
+/// GIF图片加载
 @interface GifImageView : UIImageView
 
 - (void)loadGifImage:(NSString *)path;

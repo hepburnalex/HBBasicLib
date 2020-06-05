@@ -32,10 +32,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// JS交互
 @property (nonatomic, strong) NSArray *JSActionNames;
 @property (nonatomic, assign) BOOL isJSCoreEnable;
+@property (nonatomic, assign) BOOL isCleanScrollOffset;
 /// WebView
 @property (nonatomic, strong) WKWebView *webView;
 /// 加载网址
 @property (nonatomic, strong) NSString *urlStr;
+/// 加载网页HTML
+@property (nonatomic, strong) NSString *htmlStr;
 /// 是否锁定标题
 @property (nonatomic, assign) BOOL isLockTitle;
 /// 是否本地缓存

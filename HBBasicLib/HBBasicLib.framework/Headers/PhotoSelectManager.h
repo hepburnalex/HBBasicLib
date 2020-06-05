@@ -1,13 +1,14 @@
 //
 //  PhotoSelectManager.h
 //  HBBasicLib
-//  拍照/相册管理
+//
 //  Created by Hepburn on 2019/10/8.
 //  Copyright © 2019 Hepburn. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
+/// 拍照/相册管理
 @interface PhotoSelectManager : NSObject
 
 @property (nonatomic, copy) void(^OnConfigImagePicker)(UIImagePickerController *ctrl);

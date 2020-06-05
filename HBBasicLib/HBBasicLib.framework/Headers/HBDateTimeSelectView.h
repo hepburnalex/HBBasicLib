@@ -10,8 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 日期时间选择控件
 @interface HBDateTimeSelectView : UIView
 
+/// 标题
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UIDatePicker *pickerView;
 /// 是否是日期

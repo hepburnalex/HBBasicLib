@@ -1,7 +1,7 @@
 //
 //  CircleProgressView.h
 //  HBBasicLib
-//  环形进度条
+//
 //  Created by Hepburn on 16/8/25.
 //  Copyright © 2016 Hepburn. All rights reserved.
 //
@@ -24,6 +24,7 @@
 
 @end
 
+/// 环形进度条动画
 @interface CircleProgressView : UIView
 
 /// 代理

@@ -1,7 +1,7 @@
 //
 //  NetImageView.h
 //  HBBasicLib
-//  网络图片加载
+//
 //  Created by hepburn on 11-10-28.
 //  Copyright © 2019 Hepburn. All rights reserved.
 //
@@ -20,6 +20,7 @@ typedef enum {
     NetImageType_Right,
 } NetImageType;
 
+/// 网络图片加载
 @interface NetImageView : UIImageView
 
 /// 图片将要加载显示时的回调

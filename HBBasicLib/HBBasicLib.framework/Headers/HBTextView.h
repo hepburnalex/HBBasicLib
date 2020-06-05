@@ -11,6 +11,8 @@
 /// 改变输入框高度回调
 typedef void (^ChangeTextHeight)(NSString *text, CGFloat height, BOOL autoChangeHeight);
 
+
+/// 自定义多行文本输入控件
 @interface HBTextView : UITextView
 /// 占位文字
 @property (nonatomic, copy) NSString *placeholder;

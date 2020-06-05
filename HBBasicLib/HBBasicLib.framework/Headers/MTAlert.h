@@ -11,6 +11,7 @@
 
 @interface MTAlert : NSObject
 
++(void)showAlertWithTitle:(NSString *_Nullable)title  message:(NSString *_Nullable)message cancel:(NSString *_Nullable)cancel ok:(NSString *_Nullable)ok placeholder:(NSString *_Nullable)placeholder clickBlock:(void (^_Nullable)(NSInteger tag, NSString *_Nullable text))clickBlock root:(UIViewController *_Nullable)root;
 +(void)showAlertWithTitle:(NSString *_Nullable)title  message:(NSString *_Nullable)message cancel:(NSString *_Nullable)cancel ok:(NSString *_Nullable)ok clickBlock:(void (^_Nullable)(NSInteger tag))clickBlock;
 +(void)showSheetWithTitle:(NSString *_Nullable)title  message:(NSString *_Nullable)message cancel:(NSString *_Nullable)cancel ok:(NSArray *_Nullable)okArray clickBlock:(void (^_Nullable)(NSInteger tag))clickBlock;
 +(void)showAlertWithTitle:(NSString *_Nullable)title  message:(NSString *_Nullable)message cancel:(NSString *_Nullable)cancel ok:(NSString *_Nullable)ok clickBlock:(void (^_Nullable)(NSInteger tag))clickBlock root:(UIViewController *_Nullable)root;

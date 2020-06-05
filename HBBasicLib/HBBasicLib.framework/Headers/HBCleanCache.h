@@ -1,7 +1,7 @@
 //
 //  HBCleanCache.m
 //  HBBasicLib
-//  清理缓存
+//
 //  Created by Hepburn on 2019/1/2.
 //  Copyright © 2019 Hepburn. All rights reserved.
 //
@@ -10,6 +10,7 @@
 
 typedef void(^cleanCacheBlock)(void);
 
+/// 清理缓存
 @interface HBCleanCache : NSObject
 
 /// 清理缓存
