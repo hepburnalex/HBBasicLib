@@ -21,6 +21,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param caseInsensitive 不区分大小写
 - (BOOL)containsString:(NSString *)string caseInsensitive:(BOOL)caseInsensitive;
 
+/// 数组中字符串索引
+/// @param string 字符串
+/// @param caseInsensitive 不区分大小写
+- (NSInteger)indexOfString:(NSString *)string caseInsensitive:(BOOL)caseInsensitive;
+
 @end
 
 NS_ASSUME_NONNULL_END

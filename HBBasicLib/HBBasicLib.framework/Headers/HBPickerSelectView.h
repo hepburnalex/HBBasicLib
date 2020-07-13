@@ -13,8 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 单列选择控件
 @interface HBPickerSelectView : UIView<UIPickerViewDelegate, UIPickerViewDataSource>
 
-/// 选中的文字
-@property (nonatomic, readonly) NSString *selectTitle;
+@property (nonatomic, strong) UIPickerView *pickerView;
 /// 选中的索引
 @property (nonatomic, assign) NSInteger selectIndex;
 /// 展示的文字
@@ -23,10 +22,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIFont *textFont;
 /// 文字颜色
 @property (nonatomic, strong) UIColor *textColor;
-@property (nonatomic, strong) UIPickerView *pickerView;
 /// 选中事件
-@property (nonatomic, strong) void(^OnPickerSelect)(HBPickerSelectView *sender, NSInteger index);
+@property (nonatomic, strong) void(^onPickerSelect)(HBPickerSelectView *sender, NSInteger index);
 
+/// 选中的文字
+@property (nonatomic, readonly) NSString *selectTitle;
 
 /// 加载展示的文字列表
 /// @param titles 文字列表

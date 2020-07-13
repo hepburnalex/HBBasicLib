@@ -13,14 +13,15 @@ NS_ASSUME_NONNULL_BEGIN
 /// tab选择控件
 @interface HBTabNavSelectView : UIView
 
-/// 下划线
-@property (nonatomic, strong) UIView *lineView;
 /// 下划线颜色
 @property (nonatomic, strong) UIColor *lineColor;
 /// 下划线尺寸
 @property (nonatomic, assign) CGSize lineSize;
 /// 下划线距离底部边距
 @property (nonatomic, assign) CGFloat lineMargin;
+
+/// 显示分隔线
+@property (nonatomic, assign) BOOL isShowSeparatorLine;
 
 /// item的宽度
 @property (nonatomic, assign) CGFloat itemWidth;

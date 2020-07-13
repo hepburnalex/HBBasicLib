@@ -25,6 +25,7 @@
 #define iOS_Version     [[UIDevice currentDevice] systemVersion].floatValue
 
 #define kCurVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+#define kBuildVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
 
 #define WS(weakSelf)  __weak __typeof (&*self)weakSelf = self
 
@@ -48,6 +49,7 @@ if([[NSFileManager defaultManager] fileExistsAtPath: [URL path]]){ \
 
 #define CGFloatAutoFit(a) round(a*(MIN(kScreenWidth, kScreenHeight)/375.))
 #define CGFAF(a) round(a*(MIN(kScreenWidth, kScreenHeight)/320.))
+#define kCGSize(x, y)       CGSizeMake(CGFloatAutoFit(x), CGFloatAutoFit(y))
 
 //图片
 #define UIIMAGE_NAME(a) [UIImage imageNamed:a]
@@ -72,7 +74,10 @@ if([[NSFileManager defaultManager] fileExistsAtPath: [URL path]]){ \
 #define MAS_HEIGHT(x)       make.height.mas_equalTo(x)
 #define MAS_SIZE(x)         make.width.height.mas_equalTo(x)
 #define MAS_SIZES(w, h)     make.width.mas_equalTo(w);make.height.mas_equalTo(h)
+#define MAS_FRAMESIZE(s)    make.width.mas_equalTo(s.width);make.height.mas_equalTo(s.height)
 #define MAS_EDGES(x)        make.edges.mas_equalTo(x)
+#define MAS_MARGINX(x, y)   make.left.mas_equalTo(x).offset(y);make.right.mas_equalTo(x).offset(-y)
+#define MAS_MARGINY(x, y)   make.top.mas_equalTo(x).offset(y);make.bottom.mas_equalTo(x).offset(-y)
 
 #define MAS_LARGERWIDTH(x)  make.width.greaterThanOrEqualTo(x)
 #define MAS_LARGERHEIGHT(x) make.height.greaterThanOrEqualTo(x)
@@ -102,6 +107,8 @@ if([[NSFileManager defaultManager] fileExistsAtPath: [URL path]]){ \
 #define kMAS_HEIGHT(x)              MAS_HEIGHT(CGFloatAutoFit(x))
 #define kMAS_SIZE(x)                MAS_SIZE(CGFloatAutoFit(x))
 #define kMAS_SIZES(w, h)            MAS_SIZES(CGFloatAutoFit(w), CGFloatAutoFit(h))
+#define kMAS_MARGINX(x, y)          MAS_MARGINX(x, CGFloatAutoFit(y))
+#define kMAS_MARGINY(x, y)          MAS_MARGINY(x, CGFloatAutoFit(y))
 
 #define kMAS_LARGERWIDTH(x)         MAS_LARGERWIDTH(@(CGFloatAutoFit(x)))
 #define kMAS_LARGERHEIGHT(x)        MAS_LARGERHEIGHT(@(CGFloatAutoFit(x)))

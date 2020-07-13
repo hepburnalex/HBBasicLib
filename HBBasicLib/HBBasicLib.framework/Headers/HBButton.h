@@ -35,6 +35,11 @@ typedef NS_OPTIONS(NSInteger, HBButtonImageTextAlign) {
 
 + (UIButton *)CreateImageButton:(UIImage *)image selectImage:(UIImage *)selectImage;
 
+/// 圆角线框按钮
++ (UIButton *)createLineButton:(NSString *)title font:(UIFont *)font size:(CGSize)size lineColor:(UIColor *)lineColor;
+/// 圆角填充按钮
++ (UIButton *)createFillButton:(NSString *)title font:(UIFont *)font size:(CGSize)size fillColor:(UIColor *)fillColor;
+
 /// 设置图文对齐方式
 /// @param imageTextAlign 对齐方式
 /// @param offset 图文间距

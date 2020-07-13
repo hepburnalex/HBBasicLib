@@ -24,13 +24,13 @@ typedef enum {
 @interface NetImageView : UIImageView
 
 /// 图片将要加载显示时的回调
-@property (nonatomic, copy) UIImage *(^OnImageWillLoad)(NetImageView *imageView, UIImage *image);
+@property (nonatomic, copy) UIImage *(^onImageWillShow)(NetImageView *imageView, UIImage *image);
 
 /// 图片加载显示完毕后的回调
-@property (nonatomic, copy) void(^OnImageDidLoad)(NetImageView *imageView);
+@property (nonatomic, copy) void(^onImageDidShow)(NetImageView *imageView, UIImage *image);
 
 /// 图片下载成功的回调
-@property (nonatomic, copy) void(^OnLoadFinish)(NetImageView *imageView);
+@property (nonatomic, copy) void(^onLoadFinish)(NetImageView *imageView);
 
 @property (nonatomic, readonly) long long fileSize;
 @property (nonatomic, readonly) long long downloadSize;

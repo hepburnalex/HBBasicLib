@@ -14,7 +14,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSMutableAttributedString *)attributedStringWithString:(NSString *)string font:(UIFont *)font color:(UIColor *)color;
 
-- (void)addMarkColor:(UIFont *)font color:(UIColor *)color range:(NSRange)range;
+/// 设置标签字体颜色
+/// @param font 字体
+/// @param color 颜色
+/// @param range 标签范围
+- (void)addMarkColor:(nullable UIFont *)font color:(nullable UIColor *)color range:(NSRange)range;
+
+/// 设置标签字体颜色
+/// @param font 字体
+/// @param color 颜色
+/// @param mark 标签
+- (void)addMarkColor:(nullable UIFont *)font color:(nullable UIColor *)color mark:(NSString *)mark;
+
+/// 添加图片
+/// @param image 图片
+/// @param index 位置索引
 - (void)addMarkImage:(UIImage *)image index:(NSInteger)index;
 
 @end

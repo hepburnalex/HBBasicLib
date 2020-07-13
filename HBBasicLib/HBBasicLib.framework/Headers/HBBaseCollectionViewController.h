@@ -18,13 +18,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional
 // cell点击事件
-- (void)OnCollectionCellSelect:(NSIndexPath *)indexPath :(id)model;
+- (void)onCollectionCellSelect:(NSIndexPath *)indexPath :(id)model;
 // cell加载事件
-- (void)OnCollectionCellLoad:(HBBaseCollectionViewCell *)cell :(NSIndexPath *)indexPath :(id)model;
+- (void)onCollectionCellLoad:(HBBaseCollectionViewCell *)cell :(NSIndexPath *)indexPath :(id)model;
 // header加载事件
-- (void)OnCollectionHeaderLoad:(HBBaseCollectionReusableView *)headerView :(NSIndexPath *)indexPath;
+- (void)onCollectionHeaderLoad:(HBBaseCollectionReusableView *)headerView :(NSIndexPath *)indexPath;
 // footer加载事件
-- (void)OnCollectionFooterLoad:(HBBaseCollectionReusableView *)footerView :(NSIndexPath *)indexPath;
+- (void)onCollectionFooterLoad:(HBBaseCollectionReusableView *)footerView :(NSIndexPath *)indexPath;
 // 重新加载
 - (void)reloadCollection;
 // 加载更多

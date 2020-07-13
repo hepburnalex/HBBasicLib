@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 选中后的文字字体
 @property(nonatomic, strong) UIFont *selectTitleFont;
 /// 选中回调
-@property(nonatomic, strong) void(^OnTabSelect)(NSInteger index);
+@property(nonatomic, strong) void(^onTabSelect)(NSInteger index);
 /// 当前选中的index
 @property(nonatomic, assign) NSInteger currentIndex;
 

@@ -49,6 +49,46 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param borderWidth 折线宽度
 - (void)addLineLayer:(NSArray<NSValue *> *)points lineColor:(UIColor *)lineColor fillColor:(UIColor *)fillColor borderWidth:(CGFloat)borderWidth;
 
+/// 添加垂直渐变色
+/// @param srcColor 起始颜色（顶部）
+/// @param dstColor 结束颜色（底部）
+- (void)addVertGradientLayer:(UIColor *)srcColor dstColor:(UIColor *)dstColor;
+
+/// 添加垂直渐变色
+/// @param srcColor 起始颜色（顶部）
+/// @param dstColor 结束颜色（底部）
+/// @param location 渐变起始值（0~1）
+- (void)addVertGradientLayer:(UIColor *)srcColor dstColor:(UIColor *)dstColor location:(CGFloat)location;
+
+/// 添加水平渐变色
+/// @param srcColor 起始颜色（顶部）
+/// @param dstColor 结束颜色（底部）
+- (void)addHorzGradientLayer:(UIColor *)srcColor dstColor:(UIColor *)dstColor;
+
+/// 添加水平渐变色
+/// @param srcColor 起始颜色（顶部）
+/// @param dstColor 结束颜色（底部）
+/// @param location 渐变起始值（0~1）
+- (void)addHorzGradientLayer:(UIColor *)srcColor dstColor:(UIColor *)dstColor location:(CGFloat)location;
+
+/// 添加横线
+/// @param top 距离顶部边距
+/// @param margin 两侧边距
+- (UIView *)createTopLineView:(CGFloat)top margin:(CGFloat)margin;
+
+/// 添加横线
+/// @param top 距离顶部边距
+- (UIView *)createTopLineView:(CGFloat)top;
+
+/// 添加横线
+/// @param bottom 距离底部边距
+/// @param margin 两侧边距
+- (UIView *)createBottomLineView:(CGFloat)bottom margin:(CGFloat)margin;
+
+/// 添加横线
+/// @param bottom 距离底部边距
+- (UIView *)createBottomLineView:(CGFloat)bottom;
+
 @end
 
 NS_ASSUME_NONNULL_END

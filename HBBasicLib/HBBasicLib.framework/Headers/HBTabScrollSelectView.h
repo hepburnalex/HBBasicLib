@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIColor *lineColor;
 /// 下划线尺寸
 @property (nonatomic, assign) CGSize lineSize;
+/// 下划线底部对齐
+@property (nonatomic, assign) BOOL isLineBottom;
 
 /// 文字字体
 @property (nonatomic, strong) UIFont *itemFont;

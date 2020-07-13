@@ -10,12 +10,24 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HBBaseScrollViewController : HBBaseViewController
+@protocol HBBaseScrollViewControllerDelegate <NSObject>
+
+@optional
+
+- (void)scrollHeaderWithRefreshing;
+
+@end
+
+@interface HBBaseScrollViewController : HBBaseViewController<HBBaseScrollViewControllerDelegate>
 
 @property (nonatomic, strong) UIScrollView *scrollView;
 
 /// 容器视图
 @property (nonatomic, strong) UIView *containerView;
+/// 添加刷新动画
+- (void)addRefreshHeader;
+/// 停止刷新动画
+- (void)endRefresh;
 
 @end
 

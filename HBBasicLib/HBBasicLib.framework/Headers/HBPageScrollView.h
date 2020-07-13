@@ -34,6 +34,11 @@
 /// @param view 隐藏的视图
 - (void)scrollPage:(HBPageScrollView *)pageView hidePage:(UIView *)view;
 
+/// 页面选择事件
+/// @param pageView 轮播图控件
+/// @param index 索引
+- (void)scrollPage:(HBPageScrollView *)pageView onPageSelect:(NSInteger)index;
+
 @end
 
 typedef NS_OPTIONS(NSInteger, HBPageScrollType) {

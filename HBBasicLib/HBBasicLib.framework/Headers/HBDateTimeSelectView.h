@@ -13,9 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 日期时间选择控件
 @interface HBDateTimeSelectView : UIView
 
+@property (nonatomic, strong) UIDatePicker *pickerView;
 /// 标题
 @property (nonatomic, strong) UILabel *titleLabel;
-@property (nonatomic, strong) UIDatePicker *pickerView;
 /// 是否是日期
 @property (nonatomic, assign) BOOL isDate;
 /// 最大时间
@@ -23,11 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// 最小时间
 @property (nonatomic, strong) NSDate *minDate;
 /// 时间选择回调
-@property (nonatomic, strong) void(^OnTimeSelect)(HBDateTimeSelectView *sender, NSString *dateStr);
+@property (nonatomic, strong) void(^onTimeSelect)(HBDateTimeSelectView *sender, NSString *dateStr);
 /// 日期选择回调
-@property (nonatomic, strong) void(^OnDateSelect)(HBDateTimeSelectView *sender, NSString *timeStr);
+@property (nonatomic, strong) void(^onDateSelect)(HBDateTimeSelectView *sender, NSString *timeStr);
 /// 取消回调
-@property (nonatomic, strong) void(^OnCancelSelect)(void);
+@property (nonatomic, strong) void(^onCancelSelect)(void);
 
 
 /// 设置当前显示的时间
