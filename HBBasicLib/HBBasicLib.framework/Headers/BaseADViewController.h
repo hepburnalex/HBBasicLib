@@ -38,7 +38,7 @@ typedef enum {
 /// 当使用registerEmptyView注册了为空的提示框视图，该属性不为空
 @property (nonatomic, strong) UIView *emptyView;
 /// 回调处理事件
-@property (nonatomic, strong) void(^onActionSelect)(void);
+@property (nonatomic, strong) void(^onActionSelect)(id userInfo);
 
 /// 注册返回按钮图，否则显示名字为 lnr_back 的图
 /// @param image 返回按钮图
@@ -100,5 +100,6 @@ typedef enum {
 - (void)addChildViewControllers:(NSArray<BaseADViewController *> *)childControllers edgeInset:(UIEdgeInsets)edgeInset;
 - (void)showChildViewControllerIndex:(NSInteger)index;
 - (void)showChildViewControllerIndex:(NSInteger)index frame:(CGRect)frame;
+- (void)showChildViewControllerIndex:(NSInteger)index edgeInset:(UIEdgeInsets)edgeInset;
 
 @end

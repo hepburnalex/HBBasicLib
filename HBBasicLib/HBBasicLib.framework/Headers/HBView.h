@@ -89,6 +89,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param bottom 距离底部边距
 - (UIView *)createBottomLineView:(CGFloat)bottom;
 
+/// 判断是否是iPhoneX
++ (BOOL)isiPhoneX;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -22,6 +22,10 @@
 #endif
 #define kStatusBarHeight    [[UIApplication sharedApplication] statusBarFrame].size.height
 
+#define kScreenSafeAreaInsets   [[UIApplication sharedApplication] delegate].window.safeAreaInsets
+#define kIsiPhoneX              [UIView isiPhoneX]
+#define kTabBarHeight           (kIsiPhoneX?83.0:49.0)
+
 #define iOS_Version     [[UIDevice currentDevice] systemVersion].floatValue
 
 #define kCurVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]

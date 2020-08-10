@@ -82,7 +82,7 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/HBTabScrollSelectView.h>
 #import <HBBasicLib/HBCheckCodeView.h>
 #import <HBBasicLib/NetImageView.h>
-#import <HBBasicLib/GifImageView.h>
+#import <HBBasicLib/UIImageView+Gif.h>
 #import <HBBasicLib/QRCodeView.h>
 #import <HBBasicLib/MTAlert.h>
 #import <HBBasicLib/HBMasonry.h>
@@ -99,6 +99,7 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/HBColor.h>
 #import <HBBasicLib/NSString+HBDate.h>
 #import <HBBasicLib/NSString+HBEncrypt.h>
+#import <HBBasicLib/NSData+HBEncrypt.h>
 #import <HBBasicLib/NSDate+HBCalendar.h>
 #import <HBBasicLib/NSString+HBValidate.h>
 #import <HBBasicLib/NSMutableAttributedString+Extend.h>
