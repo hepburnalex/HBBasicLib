@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param scale 图片缩放比
 /// @param duration 动画时长
 /// @param repeat 重复次数（0表示无限）
-- (void)loadGifImage:(NSString *)path scale:(CGFloat)scale duration:(CGFloat)duration repeat:(NSInteger)repeat;
+- (void)showGifImage:(NSString *)path scale:(CGFloat)scale duration:(CGFloat)duration repeat:(NSInteger)repeat;
 
 /// 生成GIF图
 /// @param images 图片帧
