@@ -22,6 +22,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param urlStr 请求url
 - (BOOL)webViewShouldStartLoadWithUrl:(NSString *)urlStr;
 
+/// webView加载完毕
+/// @param urlStr 请求url
+- (void)webViewDidFinishLoadWithUrl:(NSString *)urlStr;
+
 /// 处理URL
 - (void)applicationOpenUrl:(NSURL *)url;
 

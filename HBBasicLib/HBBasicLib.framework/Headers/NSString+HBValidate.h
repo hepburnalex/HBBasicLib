@@ -36,6 +36,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 获取拼音首字母(传入汉字字符串, 返回大写拼音首字母)
 @property (nonatomic, readonly) NSString *firstCharactor;
 
+/// 是否是数字
+@property (nonatomic, readonly) BOOL isNumber;
+
 @end
 
 NS_ASSUME_NONNULL_END

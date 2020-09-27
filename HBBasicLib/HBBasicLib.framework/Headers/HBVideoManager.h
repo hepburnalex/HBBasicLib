@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,7 +22,23 @@ NS_ASSUME_NONNULL_BEGIN
 /// 合并视频
 /// @param videoUrls 视频Url列表
 /// @param audioURL 音频Url
-- (void)joinMedia:(NSArray<NSURL *> *)videoUrls :(nullable NSURL *)audioURL;
+- (void)joinMedia:(NSArray<NSURL *> *)videoUrls audioURL:(NSURL *)audioURL startAudioTime:(CGFloat)startAudioTime ;
+
+/// 给视频添加BGM
+/// @param audioUrl 音频
+/// @param videoUrl 视频
+/// @param outputUrl 导出视频
+- (void)mixVideoBGM:(NSURL*)audioUrl andVideo:(NSURL *)videoUrl outputUrl:(NSURL *)outputUrl;
+
+/// 给视频添加BGM
+/// @param audioUrl 音频
+/// @param audioVolume 音频音量
+/// @param audioStartSecond 音频开始时间 
+/// @param videoUrl 视频
+/// @param videoVolume 视频音量
+/// @param isAudioMix 音量合并
+/// @param outputUrl 导出视频
+- (void)mixVideoBGM:(NSURL*)audioUrl audioVolume:(CGFloat)audioVolume audioStartSecond:(CGFloat)audioStartSecond andVideo:(NSURL *)videoUrl videoVolume:(CGFloat)videoVolume isAudioMix:(BOOL)isAudioMix outputUrl:(NSURL *)outputUrl;
 
 /// 保存视频到相册
 /// @param path 视频路径

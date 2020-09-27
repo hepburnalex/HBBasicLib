@@ -37,6 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIImage *backImage;
 /// 选中后背景图
 @property (nonatomic, strong) UIImage *selectBackImage;
+/// 背景图边距
+@property (nonatomic, assign) CGFloat backImageMargin;
 
 /// 当前选中的index（默认值为0，选择第一个）
 @property (nonatomic, assign) NSInteger currentIndex;

@@ -72,6 +72,7 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/HBView.h>
 #import <HBBasicLib/HBButton.h>
 #import <HBBasicLib/HBLabel.h>
+#import <HBBasicLib/HBAttributesLabel.h>
 #import <HBBasicLib/HBSearchBar.h>
 #import <HBBasicLib/HBNavigationBar.h>
 #import <HBBasicLib/HBTextView.h>
@@ -105,6 +106,7 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/NSMutableAttributedString+Extend.h>
 #import <HBBasicLib/NSArray+Extend.h>
 #import <HBBasicLib/HBCleanCache.h>
+#import <HBBasicLib/MBProgressHUD+MJ.h>
 #import <HBBasicLib/HBBasicHeader.h>
 
 #endif /* HBBasicHeader_h */
