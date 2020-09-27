@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
   spec.vendored_frameworks = "HBBasicLib/HBBasicLib.framework"
   spec.requires_arc = true
   spec.static_framework = true
-  spec.resources    = "HBBasicLib/MBProgressHUD.bundle"
+  spec.resource     = "HBBasicLib/MBProgressHUD.bundle"
   spec.dependency "Masonry"
   spec.dependency "MJRefresh"
   spec.dependency "IQKeyboardManager"
