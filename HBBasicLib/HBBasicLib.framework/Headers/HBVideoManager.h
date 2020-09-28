@@ -18,11 +18,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) void(^videoMixFinish)(NSURL *url);
 @property (nonatomic, strong) void(^saveAlbumFinish)(BOOL isImage, BOOL isSuccess);
 
-
-/// 合并视频
-/// @param videoUrls 视频Url列表
-/// @param audioURL 音频Url
-- (void)joinMedia:(NSArray<NSURL *> *)videoUrls audioURL:(NSURL *)audioURL startAudioTime:(CGFloat)startAudioTime ;
+/// 给视频添加BGM
+/// @param audioUrl 音频
+/// @param audioVolume 音频音量
+/// @param audioStartSecond 音频开始时间
+/// @param videoUrl 视频
+/// @param videoVolume 视频音量
+/// @param isAudioMix 音量合并
+/// @param outputUrl 导出视频
+- (void)mixVideoBGM:(NSURL*)audioUrl audioVolume:(CGFloat)audioVolume audioStartSecond:(CGFloat)audioStartSecond andVideo:(NSURL *)videoUrl videoVolume:(CGFloat)videoVolume isAudioMix:(BOOL)isAudioMix outputUrl:(NSURL *)outputUrl;
 
 /// 给视频添加BGM
 /// @param audioUrl 音频
@@ -30,15 +34,15 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param outputUrl 导出视频
 - (void)mixVideoBGM:(NSURL*)audioUrl andVideo:(NSURL *)videoUrl outputUrl:(NSURL *)outputUrl;
 
-/// 给视频添加BGM
-/// @param audioUrl 音频
-/// @param audioVolume 音频音量
-/// @param audioStartSecond 音频开始时间 
-/// @param videoUrl 视频
-/// @param videoVolume 视频音量
-/// @param isAudioMix 音量合并
+/// 合并视频
+/// @param videoUrls 导入视频
 /// @param outputUrl 导出视频
-- (void)mixVideoBGM:(NSURL*)audioUrl audioVolume:(CGFloat)audioVolume audioStartSecond:(CGFloat)audioStartSecond andVideo:(NSURL *)videoUrl videoVolume:(CGFloat)videoVolume isAudioMix:(BOOL)isAudioMix outputUrl:(NSURL *)outputUrl;
+- (void)joinVideos:(NSArray<NSURL *> *)videoUrls outputUrl:(NSURL *)outputUrl;
+
+/// 合并视频
+/// @param videoUrl 导入视频
+/// @param outputUrl 导出视频
+- (void)cutVideo:(NSURL *)videoUrl startTime:(CGFloat)startTime duration:(CGFloat)duration outputUrl:(NSURL *)outputUrl;
 
 /// 保存视频到相册
 /// @param path 视频路径
