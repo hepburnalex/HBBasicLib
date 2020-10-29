@@ -32,6 +32,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param key 密钥
 - (NSData *)AES128DecryptData:(NSString *)key;
 
+/// HMAC-SHA1加密
+- (NSData *)HMACSHA1EncryptData:(NSString *)secret;
+
 @end
 
 NS_ASSUME_NONNULL_END

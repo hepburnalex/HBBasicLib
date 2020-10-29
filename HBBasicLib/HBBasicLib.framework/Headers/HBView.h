@@ -49,6 +49,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param borderWidth 折线宽度
 - (void)addLineLayer:(NSArray<NSValue *> *)points lineColor:(UIColor *)lineColor fillColor:(UIColor *)fillColor borderWidth:(CGFloat)borderWidth;
 
+/// 添加渐变色
+/// @param colors 颜色
+/// @param isVertical 是否垂直
+- (void)addGradientLayer:(NSArray<UIColor *> *)colors isVertical:(BOOL)isVertical;
+
 /// 添加垂直渐变色
 /// @param srcColor 起始颜色（顶部）
 /// @param dstColor 结束颜色（底部）
@@ -70,6 +75,17 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param dstColor 结束颜色（底部）
 /// @param location 渐变起始值（0~1）
 - (void)addHorzGradientLayer:(UIColor *)srcColor dstColor:(UIColor *)dstColor location:(CGFloat)location;
+
+/// 添加透明区域
+/// @param rect 透明区域
+/// @param cornerRadius 透明区域圆角 
+- (void)addTransparentRect:(CGRect)rect cornerRadius:(CGFloat)cornerRadius;
+
+/// 添加图片遮罩
+/// @param maskImage 遮罩图片
+/// @param leftCapWidth 横向拉伸点
+/// @param topCapHeight 纵向拉伸点
+- (void)addImageMask:(UIImage *)maskImage leftCapWidth:(CGFloat)leftCapWidth topCapHeight:(CGFloat)topCapHeight;
 
 /// 添加横线
 /// @param top 距离顶部边距

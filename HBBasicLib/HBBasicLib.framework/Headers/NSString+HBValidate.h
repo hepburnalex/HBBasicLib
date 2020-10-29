@@ -27,17 +27,21 @@ NS_ASSUME_NONNULL_BEGIN
 /// 判断是否以字母开头
 @property (nonatomic, readonly) BOOL isEnglishFirst;
 
-/// 判断是否以字母开头
+/// 判断是否以数字开头
 @property (nonatomic, readonly) BOOL isDigitFirst;
 
 /// 判断是否以汉字开头
 @property (nonatomic, readonly) BOOL isChineseFirst;
 
-/// 获取拼音首字母(传入汉字字符串, 返回大写拼音首字母)
-@property (nonatomic, readonly) NSString *firstCharactor;
-
 /// 是否是数字
-@property (nonatomic, readonly) BOOL isNumber;
+@property (nonatomic, readonly) BOOL isDigit;
+
+/// 获取拼音首字母(传入汉字字符串, 返回大写拼音首字母)
+@property (nonatomic, readonly) NSString *firstCharacter;
+
+/// 字节长度
+@property (nonatomic, readonly) NSInteger characterNumber;
+
 
 @end
 

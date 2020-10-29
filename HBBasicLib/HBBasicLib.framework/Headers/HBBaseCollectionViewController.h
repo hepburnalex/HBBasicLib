@@ -6,11 +6,11 @@
 //  Copyright © 2018 Hepburn. All rights reserved.
 //
 
-#import "HBBaseViewController.h"
-#import "HBRefreshCollectionView.h"
-#import "HBBaseCollectionViewLayout.h"
-#import "HBBaseCollectionReusableView.h"
-#import "HBBaseCollectionViewCell.h"
+#import <HBBasicLib/HBBaseViewController.h>
+#import <HBBasicLib/HBRefreshCollectionView.h>
+#import <HBBasicLib/HBBaseCollectionViewLayout.h>
+#import <HBBasicLib/HBBaseCollectionReusableView.h>
+#import <HBBasicLib/HBBaseCollectionViewCell.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

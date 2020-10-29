@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "HBBasicLib"
-  spec.version      = "1.0.21"
+  spec.version      = "1.0.23"
   spec.summary      = "HBBasic iOS SDK"
   spec.description  = "iOS library for HBBasic"
   spec.homepage     = "https://github.com/hepburnalex/HBBasicLib"
@@ -14,7 +14,6 @@ Pod::Spec.new do |spec|
   spec.vendored_frameworks = "HBBasicLib/HBBasicLib.framework"
   spec.requires_arc = true
   spec.static_framework = true
-  spec.resource     = "HBBasicLib/MBProgressHUD.bundle"
   spec.dependency "Masonry"
   spec.dependency "MJRefresh"
   spec.dependency "IQKeyboardManager"

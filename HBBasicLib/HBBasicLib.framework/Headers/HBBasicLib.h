@@ -89,9 +89,11 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/HBMasonry.h>
 #import <HBBasicLib/CircleProgressView.h>
 #import <HBBasicLib/HBCircleProgress.h>
-#import <HBBasicLib/HBDateTimeSelectView.h>
 #import <HBBasicLib/HBMoviePlayerView.h>
+#import <HBBasicLib/HBDateTimeSelectView.h>
 #import <HBBasicLib/HBPickerSelectView.h>
+#import <HBBasicLib/HBCommentView.h>
+#import <HBBasicLib/HBPageAutoScrollView.h>
 
 /*
  * Extend

@@ -6,8 +6,8 @@
 //  Copyright © 2019 Hepburn. All rights reserved.
 //
 
-#import "HBBaseViewController.h"
-#import "HBRefreshTableView.h"
+#import <HBBasicLib/HBBaseViewController.h>
+#import <HBBasicLib/HBRefreshTableView.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

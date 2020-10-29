@@ -52,4 +52,10 @@ typedef NS_OPTIONS(NSInteger, HBButtonImageTextAlign) {
 
 - (void)refreshView;
 
+/// 设置图片
+- (void)setNormalImage:(UIImage *)image;
+
+/// 设置选中图片
+- (void)setSelectedImage:(UIImage *)image;
+
 @end

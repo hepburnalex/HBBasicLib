@@ -27,6 +27,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// UrlDecode
 @property (nonatomic, readonly) NSString *urlDecodeString;
+
+/// HMAC-SHA1加密
+- (NSData *)HMACSHA1Encrypt:(NSString *)secret;
+
 @end
 
 NS_ASSUME_NONNULL_END

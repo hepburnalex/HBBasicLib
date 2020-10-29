@@ -73,5 +73,6 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 #define kMsg_JoinMediaFinish    @"kMsg_JoinMediaFinish"
+#define kMsg_JoinMediaFailed    @"kMsg_JoinMediaFailed"
 
 NS_ASSUME_NONNULL_END

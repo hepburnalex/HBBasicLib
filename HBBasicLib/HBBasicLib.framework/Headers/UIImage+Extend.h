@@ -24,9 +24,18 @@
 
 @interface UIImage (Mask)
 
-- (UIImage *)colorImage:(UIColor *)theColor;
+/// 图片上色
+/// @param tintColor 颜色 
+- (UIImage *)colorImage:(UIColor *)tintColor;
+
+/// 图片变色
+/// @param color 颜色
 - (UIImage *)reColorImage:(UIColor *)color;
+
 - (UIImage *)maskImage:(UIImage *)theMaskImage;
+
+/// 拉伸图片
+- (UIImage *)stretchImageWithSize:(CGSize)newSize leftCapWidth:(CGFloat)leftCapWidth topCapHeight:(CGFloat)topCapHeight;
 
 @end
 
@@ -62,6 +71,7 @@
 /// 图片上色
 /// @param tintColor 颜色
 + (UIImage *)imageWithTintColor:(UIImage *)image :(UIColor *)tintColor;
+
 @end
 
 @interface UIImage (View)
