@@ -86,6 +86,10 @@ HBTabScrollSelectView：分类导航（滚动）
 
 HBPageScrollView：轮播图
 
+HBPageAutoScrollView：无限轮播图
+
+HBCommentView：评论控件
+
 NetImageView：展示网络图片
 
 QRCodeView：二维码
