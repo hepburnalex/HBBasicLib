@@ -54,7 +54,7 @@ if([[NSFileManager defaultManager] fileExistsAtPath: [URL path]]){ \
 #define CGFloatAutoFit(a) round(a*(MIN(kScreenWidth, kScreenHeight)/375.))
 #define CGFAF(a) round(a*(MIN(kScreenWidth, kScreenHeight)/320.))
 #define kCGSize(x, y)       CGSizeMake(CGFloatAutoFit(x), CGFloatAutoFit(y))
-
+#define kCGRect(x, y, w, h) CGRectMake(CGFloatAutoFit(x), CGFloatAutoFit(y), CGFloatAutoFit(w), CGFloatAutoFit(h))
 //图片
 #define UIIMAGE_NAME(a) [UIImage imageNamed:a]
 

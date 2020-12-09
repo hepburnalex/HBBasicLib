@@ -26,13 +26,21 @@
 /// 页面显示事件
 /// @param pageView 轮播图控件
 /// @param view 显示的视图
+/// @param index 页面索引  
 /// @param isManual YES手动翻页 NO自动翻页
-- (void)scrollPage:(HBPageScrollView *)pageView showPage:(UIView *)view manual:(BOOL)isManual;
+- (void)scrollPage:(HBPageScrollView *)pageView showPage:(UIView *)view index:(NSInteger)index manual:(BOOL)isManual;
 
 /// 页面隐藏事件
 /// @param pageView 轮播图控件
 /// @param view 隐藏的视图
-- (void)scrollPage:(HBPageScrollView *)pageView hidePage:(UIView *)view;
+/// @param index 页面索引 
+- (void)scrollPage:(HBPageScrollView *)pageView hidePage:(UIView *)view index:(NSInteger)index;
+
+/// 页面释放事件
+/// @param pageView 轮播图控件
+/// @param view 隐藏的视图
+/// @param index 页面索引
+- (void)scrollPage:(HBPageScrollView *)pageView releasePage:(UIView *)view index:(NSInteger)index;
 
 /// 页面选择事件
 /// @param pageView 轮播图控件

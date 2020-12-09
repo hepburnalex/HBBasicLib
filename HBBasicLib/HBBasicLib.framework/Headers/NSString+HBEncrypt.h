@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// MD5
 @property (nonatomic, readonly) NSString *MD5String;
 
+/// SHA1
+@property (nonatomic, readonly) NSString *SHA1String;
+
 /// Base64加密
 @property (nonatomic, readonly) NSString *base64EncString;
 
@@ -30,6 +33,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// HMAC-SHA1加密
 - (NSData *)HMACSHA1Encrypt:(NSString *)secret;
+
+/// MD5
++ (NSString *)MD5EncryptText:(NSString *)text;
 
 @end
 

@@ -77,6 +77,7 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/HBNavigationBar.h>
 #import <HBBasicLib/HBTextView.h>
 #import <HBBasicLib/HBTextField.h>
+#import <HBBasicLib/HBMoneyTextField.h>
 #import <HBBasicLib/HBPageScrollView.h>
 #import <HBBasicLib/HBTabButtonView.h>
 #import <HBBasicLib/HBTabNavSelectView.h>

@@ -34,13 +34,15 @@
 
 - (UIImage *)maskImage:(UIImage *)theMaskImage;
 
-/// 拉伸图片
-- (UIImage *)stretchImageWithSize:(CGSize)newSize leftCapWidth:(CGFloat)leftCapWidth topCapHeight:(CGFloat)topCapHeight;
-
 @end
 
 
 @interface UIImage (Scale)
+
+/// 图片缩放到固定大小
+/// @param newsize 图片尺寸
+/// @param scale 放大比例
+- (UIImage *)scaleImageToSize:(CGSize)newsize scale:(CGFloat)scale;
 
 /// 图片缩放到固定大小
 /// @param newsize 图片尺寸
@@ -53,6 +55,9 @@
 /// 图片裁剪
 /// @param rect 裁剪区域
 - (UIImage *)getSubImage:(CGRect)rect;
+
+/// 拉伸图片
+- (UIImage *)stretchImageWithSize:(CGSize)newSize leftCapWidth:(CGFloat)leftCapWidth topCapHeight:(CGFloat)topCapHeight;
 
 @end
 

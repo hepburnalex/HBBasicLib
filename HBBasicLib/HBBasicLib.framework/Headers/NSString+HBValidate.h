@@ -24,6 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 手机号
 @property (nonatomic, readonly) BOOL isValidateMobile;
 
+/// 固定电话
+@property (nonatomic, readonly) BOOL isValidateTelephone;
+
 /// 判断是否以字母开头
 @property (nonatomic, readonly) BOOL isEnglishFirst;
 
@@ -42,6 +45,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 字节长度
 @property (nonatomic, readonly) NSInteger characterNumber;
 
+/// 金额展示（12,345,678.00或者12,345,678）
+@property (nonatomic, readonly) NSString *moneyFormat;
 
 @end
 

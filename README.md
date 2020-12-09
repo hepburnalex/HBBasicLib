@@ -90,6 +90,8 @@ HBPageAutoScrollView：无限轮播图
 
 HBCommentView：评论控件
 
+HBMoneyTextField：金额输入框
+
 NetImageView：展示网络图片
 
 QRCodeView：二维码
