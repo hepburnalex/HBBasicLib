@@ -50,6 +50,7 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/HBBaseTableViewController.h>
 #import <HBBasicLib/HBRefreshTableView.h>
 #import <HBBasicLib/HBBaseTableViewCell.h>
+#import <HBBasicLib/HBBaseEditTableViewCell.h>
 
 /*
  * HBCollectionView

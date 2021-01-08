@@ -46,8 +46,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param points 折线目标点 [NSValue valueWithCGPoint:point]
 /// @param lineColor 折线颜色
 /// @param fillColor 填充颜色
-/// @param borderWidth 折线宽度
-- (void)addLineLayer:(NSArray<NSValue *> *)points lineColor:(UIColor *)lineColor fillColor:(UIColor *)fillColor borderWidth:(CGFloat)borderWidth;
+/// @param lineWidth 折线宽度
+- (void)addLineLayer:(NSArray<NSValue *> *)points lineColor:(UIColor *)lineColor fillColor:(UIColor *)fillColor lineWidth:(CGFloat)lineWidth;
 
 /// 添加渐变色
 /// @param colors 颜色

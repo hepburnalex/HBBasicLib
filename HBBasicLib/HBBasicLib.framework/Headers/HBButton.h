@@ -45,17 +45,70 @@ typedef NS_OPTIONS(NSInteger, HBButtonImageTextAlign) {
 /// @param offset 图文间距
 //- (void)setImageTextAlign:(TButtonImageTextAlign)imageTextAlign offset:(CGFloat)offset;
 
+
+#pragma mark - 文字
+
+/// 设置文字
+/// @param title 文字
+/// @param selectTitle 选中文字
+- (void)setTitle:(NSString *)title selectTitle:(NSString *)selectTitle;
+
+/// 设置文字
+/// @param title 文字
+- (void)setNormalTitle:(NSString *)title;
+
+/// 设置选中文字
+/// @param selectTitle 选中文字
+- (void)setSelectedTitle:(NSString *)selectTitle;
+
+#pragma mark - 文字颜色
+
+/// 设置文字颜色
+/// @param color 文字颜色
+/// @param selectColor 选中文字颜色
+- (void)setTitleColor:(UIColor *)color selectColor:(UIColor *)selectColor;
+
+/// 设置文字颜色
+/// @param color 文字颜色
+- (void)setNormalTitleColor:(UIColor *)color;
+
+/// 设置选中文字颜色
+/// @param selectColor 选中文字颜色
+- (void)setSelectedTitleColor:(UIColor *)selectColor;
+
+#pragma mark - 背景色
+
 /// 设置背景色
 /// @param color 背景色
 /// @param state 按钮状态
 - (void)setBackColor:(UIColor *)color forState:(UIControlState)state;
 
-- (void)refreshView;
+/// 设置背景色
+/// @param color 背景色
+/// @param selectColor 选中背景色
+- (void)setBackColor:(UIColor *)color selectColor:(UIColor *)selectColor;
+
+/// 设置背景色
+/// @param color 背景色
+- (void)setNormalBackColor:(UIColor *)color;
+
+/// 设置选中背景色
+/// @param selectColor 选中背景色
+- (void)setSelectedBackColor:(UIColor *)selectColor;
+
+#pragma mark - 图片
+
+/// 设置图片
+/// @param image 图片
+/// @param selectImage 选中图片
+- (void)setImage:(UIImage *)image selectImage:(UIImage *)selectImage;
 
 /// 设置图片
 - (void)setNormalImage:(UIImage *)image;
 
 /// 设置选中图片
 - (void)setSelectedImage:(UIImage *)image;
+
+- (void)refreshView;
 
 @end

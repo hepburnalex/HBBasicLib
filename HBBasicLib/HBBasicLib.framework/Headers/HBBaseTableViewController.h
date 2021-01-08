@@ -59,6 +59,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 注册cell
 - (void)registerCellClass:(NSString *)classname;
 - (void)registerCellClass:(NSString *)classname forSection:(NSInteger)section;
+/// 清除注册
+- (void)cleanRegisterCellClass;
 /// 刷新页面
 - (void)reloadData;
 /// 加载完毕后刷新
@@ -71,6 +73,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 清除Model
 - (void)cleanModelsForSection:(NSInteger)section;
 - (void)cleanAllModels;
+
+/// 根据section获取model数组
+- (NSMutableArray *)modelsForSection:(NSInteger)section;
 
 @end
 

@@ -20,11 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// 下划线距离底部边距
 @property (nonatomic, assign) CGFloat lineMargin;
 
-/// 显示分隔线
-@property (nonatomic, assign) BOOL isShowSeparatorLine;
-
-/// item的宽度
-@property (nonatomic, assign) CGFloat itemWidth;
 /// 正常字体
 @property (nonatomic, strong) UIFont *itemFont;
 /// 选中字体
@@ -39,6 +34,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIImage *selectBackImage;
 /// 背景图边距
 @property (nonatomic, assign) CGFloat backImageMargin;
+
+/// item的宽度
+@property (nonatomic, assign) CGFloat itemWidth;
+/// 显示分隔线
+@property (nonatomic, assign) BOOL isShowSeparatorLine;
 
 /// 当前选中的index（默认值为0，选择第一个）
 @property (nonatomic, assign) NSInteger currentIndex;

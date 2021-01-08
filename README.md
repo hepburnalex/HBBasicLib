@@ -48,6 +48,8 @@ HBBaseTableViewCell
 
 HBBaseTableViewController
 
+HBBaseEditTableViewCell
+
 ## View
 
 HBView：UIView封装
