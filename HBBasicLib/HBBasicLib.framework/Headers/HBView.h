@@ -90,11 +90,23 @@ NS_ASSUME_NONNULL_BEGIN
 /// 添加横线
 /// @param top 距离顶部边距
 /// @param margin 两侧边距
+/// @param reference 参照物
+- (UIView *)createTopLineView:(CGFloat)top margin:(CGFloat)margin reference:(UIView *)reference;
+
+/// 添加横线
+/// @param top 距离顶部边距
+/// @param margin 两侧边距
 - (UIView *)createTopLineView:(CGFloat)top margin:(CGFloat)margin;
 
 /// 添加横线
 /// @param top 距离顶部边距
 - (UIView *)createTopLineView:(CGFloat)top;
+
+/// 添加横线
+/// @param bottom 距离底部边距
+/// @param margin 两侧边距
+/// @param reference 参照物 
+- (UIView *)createBottomLineView:(CGFloat)bottom margin:(CGFloat)margin reference:(UIView *)reference;
 
 /// 添加横线
 /// @param bottom 距离底部边距

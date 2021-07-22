@@ -82,11 +82,14 @@ if([[NSFileManager defaultManager] fileExistsAtPath: [URL path]]){ \
 #define MAS_EDGES(x)        make.edges.mas_equalTo(x)
 #define MAS_MARGINX(x, y)   make.left.mas_equalTo(x).offset(y);make.right.mas_equalTo(x).offset(-y)
 #define MAS_MARGINY(x, y)   make.top.mas_equalTo(x).offset(y);make.bottom.mas_equalTo(x).offset(-y)
+#define MAS_SAFETOP(x, y)   make.top.mas_equalTo(x.mas_safeAreaLayoutGuideTop).offset(y)
+#define MAS_SAFEBOTTOM(x, y)   make.top.mas_equalTo(x.mas_safeAreaLayoutGuideBottom).offset(y)
 
 #define MAS_LARGERWIDTH(x)  make.width.greaterThanOrEqualTo(x)
 #define MAS_LARGERHEIGHT(x) make.height.greaterThanOrEqualTo(x)
 #define MAS_LESSWIDTH(x)    make.width.lessThanOrEqualTo(x)
 #define MAS_LESSHEIGHT(x)   make.height.lessThanOrEqualTo(x)
+#define MAS_LESSRIGHT(x, y) make.right.mas_lessThanOrEqualTo(x).offset(y)
 
 #define MAS_TOPBOTTOM(x, y)         make.top.bottom.mas_equalTo(x).offset(y)
 #define MAS_LEFTRIGHT(x, y)         make.left.right.mas_equalTo(x).offset(y)
@@ -113,6 +116,8 @@ if([[NSFileManager defaultManager] fileExistsAtPath: [URL path]]){ \
 #define kMAS_SIZES(w, h)            MAS_SIZES(CGFloatAutoFit(w), CGFloatAutoFit(h))
 #define kMAS_MARGINX(x, y)          MAS_MARGINX(x, CGFloatAutoFit(y))
 #define kMAS_MARGINY(x, y)          MAS_MARGINY(x, CGFloatAutoFit(y))
+#define kMAS_SAFETOP(x, y)          MAS_SAFETOP(x, CGFloatAutoFit(y))
+#define kMAS_SAFEBOTTOM(x, y)       MAS_SAFEBOTTOM(x, CGFloatAutoFit(y))
 
 #define kMAS_LARGERWIDTH(x)         MAS_LARGERWIDTH(@(CGFloatAutoFit(x)))
 #define kMAS_LARGERHEIGHT(x)        MAS_LARGERHEIGHT(@(CGFloatAutoFit(x)))

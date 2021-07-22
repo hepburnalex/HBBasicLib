@@ -30,6 +30,8 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/HBVideoManager.h>
 #import <HBBasicLib/HBLanguageManager.h>
 #import <HBBasicLib/HBLocationManager.h>
+#import <HBBasicLib/HBContactManager.h>
+#import <HBBasicLib/HBiCloudManager.h>
 
 /*
  * BaseView
@@ -66,6 +68,7 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
  */
 #import <HBBasicLib/BaseModel.h>
 #import <HBBasicLib/BaseViewModel.h>
+#import <HBBasicLib/LocalCacheViewModel.h>
 
 /*
  * View

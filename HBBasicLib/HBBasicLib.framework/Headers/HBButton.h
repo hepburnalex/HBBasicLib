@@ -18,7 +18,7 @@ typedef NS_OPTIONS(NSInteger, HBButtonImageTextAlign) {
 
 @interface UIButton (HBButton)
 
-/// 图文排列方式
+/// 图文排列方式（默认左图右文）
 @property (nonatomic, assign) HBButtonImageTextAlign imageTextAlign;
 
 /// 图文间距
@@ -26,19 +26,27 @@ typedef NS_OPTIONS(NSInteger, HBButtonImageTextAlign) {
 
 + (UIButton *)buttonWithFrame:(CGRect)frame;
 
+/// 图片+文字按钮
++ (UIButton *)CreateButton:(UIImage *)image title:(NSString *)title font:(UIFont *)font titleColor:(UIColor *)titleColor;
 + (UIButton *)CreateButton:(UIImage *)image selectImage:(UIImage *)selectImage title:(NSString *)title font:(UIFont *)font titleColor:(UIColor *)titleColor selectColor:(UIColor *)selectColor backColor:(UIColor *)backColor;
+
+/// 文字按钮
 + (UIButton *)CreateTextButton:(NSString *)title font:(UIFont *)font titleColor:(UIColor *)titleColor;
 + (UIButton *)CreateTextButton:(NSString *)title font:(UIFont *)font titleColor:(UIColor *)titleColor backColor:(UIColor *)backColor;
 + (UIButton *)CreateTextButton:(NSString *)title font:(UIFont *)font titleColor:(UIColor *)titleColor selectColor:(UIColor *)selectColor backColor:(UIColor *)backColor;
 
-+ (UIButton *)CreateButton:(UIImage *)image title:(NSString *)title font:(UIFont *)font titleColor:(UIColor *)titleColor;
-
+/// 图片按钮
 + (UIButton *)CreateImageButton:(UIImage *)image selectImage:(UIImage *)selectImage;
 
 /// 圆角线框按钮
 + (UIButton *)createLineButton:(NSString *)title font:(UIFont *)font size:(CGSize)size lineColor:(UIColor *)lineColor;
++ (UIButton *)createLineButton:(NSString *)title font:(UIFont *)font size:(CGSize)size cornerRadius:(CGFloat)cornerRadius lineColor:(UIColor *)lineColor;
++ (UIButton *)createLineButton:(NSString *)title font:(UIFont *)font size:(CGSize)size cornerRadius:(CGFloat)cornerRadius lineColor:(UIColor *)lineColor fillColor:(UIColor *)fillColor;
+
 /// 圆角填充按钮
 + (UIButton *)createFillButton:(NSString *)title font:(UIFont *)font size:(CGSize)size fillColor:(UIColor *)fillColor;
++ (UIButton *)createFillButton:(NSString *)title font:(UIFont *)font size:(CGSize)size cornerRadius:(CGFloat)cornerRadius fillColor:(UIColor *)fillColor;
++ (UIButton *)createFillButton:(NSString *)title font:(UIFont *)font size:(CGSize)size cornerRadius:(CGFloat)cornerRadius fillColor:(UIColor *)fillColor titleColor:(UIColor *)titleColor;
 
 /// 设置图文对齐方式
 /// @param imageTextAlign 对齐方式

@@ -21,14 +21,14 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HBLocationManager : NSObject<CLLocationManagerDelegate>
 
 @property (nonatomic, assign) HBLocationManagerType locationType;
-@property (nonatomic, assign) BOOL isChina;         //是否是中国
-@property (nonatomic, assign) CGFloat latitude;
-@property (nonatomic, assign) CGFloat longitude;
-@property (nonatomic, strong) NSString *city;       //城市
-@property (nonatomic, strong) NSString *country;    //国家
-@property (nonatomic, strong) NSString *province;   //省份（直辖市该字段为空）
-@property (nonatomic, strong) NSString *district;   //区
-@property (nonatomic, strong) NSString *address;    //详细地址
+@property (nonatomic, readonly) BOOL isChina;         //是否是中国
+@property (nonatomic, readonly) CGFloat latitude;
+@property (nonatomic, readonly) CGFloat longitude;
+@property (nonatomic, readonly) NSString *city;       //城市
+@property (nonatomic, readonly) NSString *country;    //国家
+@property (nonatomic, readonly) NSString *province;   //省份（直辖市该字段为空）
+@property (nonatomic, readonly) NSString *district;   //区
+@property (nonatomic, readonly) NSString *address;    //详细地址
 @property (nonatomic, strong) void(^onLoadAddress)(BOOL success);   //反地理位置编码回调
 @property (nonatomic, strong) void(^onLoadLocation)(CGFloat latitude, CGFloat longitude);
 @property (nonatomic, strong) CLLocationManager *locationManager;

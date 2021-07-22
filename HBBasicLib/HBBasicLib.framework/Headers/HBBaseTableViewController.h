@@ -21,6 +21,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)OnTableCellCreate:(UITableViewCell *)cell;
 /// 加载Cell的model时的事件
 - (void)OnTableCellLoad:(UITableViewCell *)cell index:(NSIndexPath *)indexPath model:(id)model;
+/// 加载Header时的事件
+- (void)OnTableHeaderLoad:(UIView *)header section:(NSInteger)section;
+/// 加载Footer时的事件
+- (void)OnTableFooterLoad:(UIView *)footer section:(NSInteger)section;
 /// 删除Cell的事件
 - (void)OnTableCellDelete:(NSIndexPath *)indexPath :(id)model;
 
@@ -61,6 +65,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)registerCellClass:(NSString *)classname forSection:(NSInteger)section;
 /// 清除注册
 - (void)cleanRegisterCellClass;
+/// 注册header
+- (void)registerHeaderClass:(NSString *)classname height:(CGFloat)height;
+- (void)registerHeaderClass:(NSString *)classname height:(CGFloat)height forSection:(NSInteger)section;
+/// 清除注册
+- (void)cleanRegisterHeaderClass;
+/// 注册footer
+- (void)registerFooterClass:(NSString *)classname height:(CGFloat)height;
+- (void)registerFooterClass:(NSString *)classname height:(CGFloat)height forSection:(NSInteger)section;
+/// 清除注册
+- (void)cleanRegisterFooterClass;
 /// 刷新页面
 - (void)reloadData;
 /// 加载完毕后刷新

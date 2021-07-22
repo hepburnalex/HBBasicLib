@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger currentIndex;
 /// 分页图片（支持UIImage，图片路径，图片链接）
 @property (nonatomic, strong) NSArray *images;
+/// 图片点击事件
+@property (nonatomic, strong) void(^onImageSelect)(NSInteger index);
 
 /// 重新加载页面
 - (void)reloadData;

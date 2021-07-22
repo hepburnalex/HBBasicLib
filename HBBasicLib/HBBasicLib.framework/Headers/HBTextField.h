@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HBTextField : UITextField
 
+/// 文本内容边距
+@property (nonatomic, assign) CGFloat padding;
+
 /// 添加左侧视图
 /// @param leftView 左侧视图
 - (void)addLeftView:(UIView *)leftView;

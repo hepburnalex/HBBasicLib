@@ -39,6 +39,8 @@ typedef enum {
 @property (nonatomic, strong) UIView *emptyView;
 /// 回调处理事件
 @property (nonatomic, strong) void(^onActionSelect)(id userInfo);
+/// 输入框绑定值
+@property (nonatomic, strong) NSMutableDictionary *textBindDict;
 
 /// 注册返回按钮图，否则显示名字为 lnr_back 的图
 /// @param image 返回按钮图
@@ -61,6 +63,7 @@ typedef enum {
 + (void)registerBackColor:(UIColor *)color;
 
 // NavBarItem
+- (void)addLeftButtonItem:(UIImage *)image target:(id)target action:(SEL)action;
 - (void)addLeftButtonItems:(NSArray<UIImage *> *)images target:(id)target action:(SEL)action;
 - (void)addLeftTextItem:(NSString *)name target:(id)target action:(SEL)action;
 - (void)addLeftTextItem:(NSString *)name font:(UIFont *)font color:(UIColor *)color target:(id)target action:(SEL)action;
@@ -69,6 +72,7 @@ typedef enum {
 - (void)addRightButtonItems:(NSArray<UIImage *> *)images target:(id)target action:(SEL)action;
 - (void)addRightTextItem:(NSString *)name target:(id)target action:(SEL)action;
 - (void)addRightTextItem:(NSString *)name font:(UIFont *)font color:(UIColor *)color target:(id)target action:(SEL)action;
+- (void)addRightCustomView:(UIView *)customView;
 
 - (void)addBackImageButton;
 - (void)addBackImageButton:(UIImage *)image;
@@ -101,5 +105,12 @@ typedef enum {
 - (void)showChildViewControllerIndex:(NSInteger)index;
 - (void)showChildViewControllerIndex:(NSInteger)index frame:(CGRect)frame;
 - (void)showChildViewControllerIndex:(NSInteger)index edgeInset:(UIEdgeInsets)edgeInset;
+
+/// IQKeyboard开关
+/// @param isEnable 是否开启
+- (void)enableIQKeyboard:(BOOL)isEnable;
+
+/// 绑定输入框
+- (void)bindTextField:(UITextField *)textField key:(NSString *)key;
 
 @end

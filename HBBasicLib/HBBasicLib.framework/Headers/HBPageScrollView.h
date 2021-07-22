@@ -29,7 +29,7 @@
 /// @param index 页面索引  
 /// @param isManual YES手动翻页 NO自动翻页
 - (void)scrollPage:(HBPageScrollView *)pageView showPage:(UIView *)view index:(NSInteger)index manual:(BOOL)isManual;
-
+- (void)scrollPage:(HBPageScrollView *)pageView showPage:(UIView *)view manual:(BOOL)isManual DEPRECATED_ATTRIBUTE;
 /// 页面隐藏事件
 /// @param pageView 轮播图控件
 /// @param view 隐藏的视图

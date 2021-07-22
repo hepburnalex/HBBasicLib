@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIView *lineView;
 
 - (void)ResetViewSize;
+/// 显示底部下划线
+- (void)showBottomLineView:(CGFloat)margin;
 
 @end
 

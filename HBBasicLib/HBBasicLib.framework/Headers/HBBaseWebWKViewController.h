@@ -37,6 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSArray *JSActionNames;
 @property (nonatomic, assign) BOOL isJSCoreEnable;
 @property (nonatomic, assign) BOOL isCleanScrollOffset;
+/// TargetFrame为空时自动重新加载（解决某些网页无法正常跳转的问题）
+@property (nonatomic, assign) BOOL isTargetFrameEnable;
 /// WebView
 @property (nonatomic, strong) WKWebView *webView;
 /// 加载网址
@@ -56,9 +58,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 监听的urlScheme
 @property (nonatomic, strong) NSString *urlScheme;
 /// 在新页面显示链接
-@property (nonatomic, strong) BOOL(^OnShowNextView)(NSString *urlstr);
+@property (nonatomic, strong) BOOL(^checkWebLink)(NSString *urlstr);
 /// JS调用OC事件
-@property (nonatomic, strong) void(^OnWebJSActionSelect)(HBBaseWebWKViewController *ctrl, NSString *name, id params);
+@property (nonatomic, strong) void(^onWebJSActionSelect)(HBBaseWebWKViewController *ctrl, NSString *name, id params);
 
 /// 网页格式化
 /// @param content 网页内容
@@ -73,6 +75,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 获取网页的内容
 - (void)getJSHTML:(void(^)(NSString *result))block;
+
+/// 获取网页BODY的内容
+- (void)getJSBodyHTML:(void(^)(NSString *result))block;
 
 /// 执行JS方法
 - (void)runJSAction:(NSString *)jsaction block:(void(^)(NSString *result))block;

@@ -14,6 +14,7 @@
 @property (nonatomic, copy) void(^OnConfigImagePicker)(UIImagePickerController *ctrl);
 @property (nonatomic, copy) void(^OnPhotoSelect)(UIImage *image);
 @property (nonatomic, copy) void(^OnImageSelect)(NSString *imagepath);
+@property (nonatomic, copy) void(^OnCancelSelect)(void);
 @property (nonatomic, assign) UIViewController *rootCtrl;
 @property (nonatomic, assign) int imageWidth;
 @property (nonatomic, assign) int imageHeight;

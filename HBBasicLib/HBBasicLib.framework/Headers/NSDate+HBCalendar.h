@@ -18,7 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSInteger hour;
 @property (nonatomic, readonly) NSInteger minute;
 @property (nonatomic, readonly) NSInteger week;
+/// 获取当月第一天的星期
 @property (nonatomic, readonly) NSInteger firstWeekDayInMonth;
+/// 获取当月天数
 @property (nonatomic, readonly) NSInteger numberOfDaysInMonth;
 @property (nonatomic, readonly) NSString *weekTitle;
 /// 农历月
@@ -26,9 +28,16 @@ NS_ASSUME_NONNULL_BEGIN
 /// 农历日
 @property (nonatomic, readonly) NSString *chineseDay;
 /// 获得当前 NSDate 对象的上个月的某一天（此处定为15号）的 NSDate 对象
-@property (nonatomic, readonly) NSDate * previousMonthDate;
+@property (nonatomic, readonly) NSDate *previousMonthDate;
 /// 获得当前 NSDate 对象的下个月的某一天（此处定为15号）的 NSDate 对象
-@property (nonatomic, readonly) NSDate * nextMonthDate;
+@property (nonatomic, readonly) NSDate *nextMonthDate;
+/// 本周第一天
+@property (nonatomic, readonly) NSDate *firstDayInWeek;
+
+
+/// 获得本周第一天
+/// @param date 时间
++ (NSDate *)getWeekFirstDay:(NSDate *)date;
 
 @end
 
