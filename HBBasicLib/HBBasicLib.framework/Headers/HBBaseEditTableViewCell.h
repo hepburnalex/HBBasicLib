@@ -17,7 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *descLabel;
 @property (nonatomic, strong) UITextField *textField;
+@property (nonatomic, strong) UISwitch *switchView;
 @property (nonatomic, strong) void(^onTextChanged)(NSString *title, NSString *text);
+@property (nonatomic, strong) void(^onOpenChanged)(BOOL isOpen);
 
 /// 隐藏所有视图
 - (void)hideAllViews;
@@ -45,6 +47,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param title 标题
 /// @param imageurl 图片路径
 - (void)loadImage:(NSString *)title imageurl:(NSString *)imageurl;
+
+/// 开关
+/// @param title 标题
+/// @param open 开关
+- (void)loadSwitch:(NSString *)title open:(BOOL)open;
 
 @end
 

@@ -12,6 +12,7 @@
 @interface HBMoviePlayerView : UIView
 
 @property (nonatomic, assign) BOOL hideControl;
+@property (nonatomic, assign) BOOL fullDisplay;
 @property (nonatomic, readonly) BOOL isPlaying;
 @property (nonatomic, strong) UIButton *backButton;
 
@@ -34,6 +35,6 @@
 @interface UIView (HBMoviePlayer)
 
 - (HBMoviePlayerView *)addMoviePlayer:(NSString *)urlstr;
-- (void)removeMoviePlayer;
++ (void)removeMoviePlayer;
 
 @end

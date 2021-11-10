@@ -49,6 +49,7 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 /*
  * HBTableView
  */
+#import <HBBasicLib/HBBaseTableView.h>
 #import <HBBasicLib/HBBaseTableViewController.h>
 #import <HBBasicLib/HBRefreshTableView.h>
 #import <HBBasicLib/HBBaseTableViewCell.h>
@@ -97,6 +98,7 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
 #import <HBBasicLib/HBMoviePlayerView.h>
 #import <HBBasicLib/HBDateTimeSelectView.h>
 #import <HBBasicLib/HBPickerSelectView.h>
+#import <HBBasicLib/HBMultiPickerSelectView.h>
 #import <HBBasicLib/HBCommentView.h>
 #import <HBBasicLib/HBPageAutoScrollView.h>
 

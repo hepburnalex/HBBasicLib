@@ -1,0 +1,94 @@
+//
+//  HBBaseTableView.h
+//  HBBasicLib
+//
+//  Created by Hepburn on 2021/9/27.
+//  Copyright © 2021 Hepburn. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import <HBBasicLib/HBRefreshTableView.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@protocol HBBaseTableViewDelegate <NSObject>
+
+@optional
+
+/// 选中Cell时的事件
+- (void)OnTableCellSelect:(NSIndexPath *)indexPath :(id)model;
+/// 创建Cell时的事件
+- (void)OnTableCellCreate:(UITableViewCell *)cell;
+/// 加载Cell的model时的事件
+- (void)OnTableCellLoad:(UITableViewCell *)cell index:(NSIndexPath *)indexPath model:(id)model;
+/// 加载Header时的事件
+- (void)OnTableHeaderLoad:(UIView *)header section:(NSInteger)section;
+/// 加载Footer时的事件
+- (void)OnTableFooterLoad:(UIView *)footer section:(NSInteger)section;
+/// 删除Cell的事件
+- (void)OnTableCellDelete:(NSIndexPath *)indexPath :(id)model;
+
+/// 重新加载
+- (void)reloadTable;
+/// 加载更多
+- (void)loadMoreTable;
+
+/// cell菜单按钮点击事件
+- (void)OnTableCellEditActionSelect:(NSIndexPath *)indexPath model:(id)model title:(NSString *)title;
+
+/// cell菜单按钮颜色
+- (NSArray<UIColor *> *)tableViewEditActionsTitleColor:(NSIndexPath *)indexPath;
+
+/// cell菜单按钮标题
+- (NSArray<NSString *> *)tableViewEditActionsTitle:(NSIndexPath *)indexPath;
+
+/// 是否启用cell菜单按钮
+- (BOOL)tableViewEditActionsEnable:(NSIndexPath *)indexPath;
+
+@end
+
+@interface HBBaseTableView : UIView<UITableViewDelegate, UITableViewDataSource, HBBaseTableViewDelegate>
+
+@property (nonatomic, strong) HBRefreshTableView *tableView;
+@property (nonatomic, strong, nullable) UIView *tableHeaderView;
+@property (nonatomic, assign) BOOL isShowHeader;
+@property (nonatomic, assign) BOOL isShowFooter;
+@property (nonatomic, assign) BOOL isShowSeparatorLine;
+@property (nonatomic, assign) BOOL isShowCorner;
+@property (nonatomic, assign) NSInteger page;
+@property (nonatomic, assign) CGFloat sectionHeaderHeight;
+@property (nonatomic, assign) CGFloat sectionFooterHeight;
+
+/// 注册cell
+- (void)registerCellClass:(NSString *)classname;
+- (void)registerCellClass:(NSString *)classname forSection:(NSInteger)section;
+/// 清除注册
+- (void)cleanRegisterCellClass;
+/// 注册header
+- (void)registerHeaderClass:(NSString *)classname height:(CGFloat)height;
+- (void)registerHeaderClass:(NSString *)classname height:(CGFloat)height forSection:(NSInteger)section;
+/// 清除注册
+- (void)cleanRegisterHeaderClass;
+/// 注册footer
+- (void)registerFooterClass:(NSString *)classname height:(CGFloat)height;
+- (void)registerFooterClass:(NSString *)classname height:(CGFloat)height forSection:(NSInteger)section;
+/// 清除注册
+- (void)cleanRegisterFooterClass;
+/// 刷新页面
+- (void)reloadData;
+/// 加载完毕后刷新
+- (void)refreshView:(BOOL)bNoMore;
+/// 追加Model
+- (void)addModel:(id)model forSection:(NSInteger)section;
+- (void)addModels:(NSArray *)models forSection:(NSInteger)section;
+/// 加载Model
+- (void)loadModels:(NSArray *)models forSection:(NSInteger)section;
+/// 清除Model
+- (void)cleanModelsForSection:(NSInteger)section;
+- (void)cleanAllModels;
+
+/// 根据section获取model数组
+- (NSMutableArray *)modelsForSection:(NSInteger)section;
+@end
+
+NS_ASSUME_NONNULL_END

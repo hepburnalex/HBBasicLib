@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <HBBasicLib/HBButton.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -44,6 +45,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger currentIndex;
 /// tab展示的文字
 @property (nonatomic, strong) NSArray *names;
+/// tab展示的图片
+@property (nonatomic, strong) NSArray *images;
+/// 图文展示方式
+@property (nonatomic, assign) HBButtonImageTextAlign imageTextAlign;
 /// 选中的回调事件
 @property (nonatomic, strong) void(^onTabItemSelect)(NSString *name, NSInteger index);
 

@@ -41,6 +41,8 @@ typedef enum {
 @property (nonatomic, strong) void(^onActionSelect)(id userInfo);
 /// 输入框绑定值
 @property (nonatomic, strong) NSMutableDictionary *textBindDict;
+/// 自定义信息
+@property (nonatomic, strong) id userInfo;
 
 /// 注册返回按钮图，否则显示名字为 lnr_back 的图
 /// @param image 返回按钮图
@@ -96,6 +98,7 @@ typedef enum {
 // push view controller
 - (void)pushViewController:(NSString *)controllerName;
 - (void)pushViewController:(NSString *)controllerName title:(NSString *)title;
+- (void)pushViewController:(NSString *)controllerName title:(NSString *)title userInfo:(id)userInfo;
 
 /// 显示子控制器视图
 /// @param newController 子控制器
@@ -112,5 +115,11 @@ typedef enum {
 
 /// 绑定输入框
 - (void)bindTextField:(UITextField *)textField key:(NSString *)key;
+
+/// 设置默认导航条颜色
++ (void)registerAppearanceNavColor:(UIColor *)titleColor backColor:(UIColor *)backColor;
++ (void)registerAppearanceNavColor:(UIColor *)titleColor backColor:(UIColor *)backColor font:(UIFont *)font;
+/// 设置默认tab栏颜色
++ (void)registerAppearanceTabColor:(UIColor *)backColor;
 
 @end
