@@ -20,10 +20,10 @@
 - (NSString *)getStringForKey:(NSString *)key withTable:(NSString *)table;
 
 //设置当前语言
-- (void)setLanguage:(NSString*)language;
+- (void)changeLanguage:(NSString*)language;
 
 #define LANGUAGE_CNS    @"zh-Hans"
 #define LANGUAGE_EN     @"en"
-#define LL(x)     [[HBLanguageManager sharedInstance] getStringForKey:x withTable:@"Localizable"]
+#define LL(x)     [[HBLanguageManager sharedInstance] getStringForKey:x withTable:@"InfoPlist"]
 
 @end

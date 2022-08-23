@@ -26,6 +26,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 加载Gif图片
 /// @param path Gif图片路径
+- (void)showGifImage:(NSString *)path;
+
+/// 加载Gif图片
+/// @param path Gif图片路径
 /// @param scale 图片缩放比
 /// @param duration 动画时长
 /// @param repeat 重复次数（0表示无限）

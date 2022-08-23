@@ -75,6 +75,7 @@ FOUNDATION_EXPORT const unsigned char HBBasicLibVersionString[];
  * View
  */
 #import <HBBasicLib/HBView.h>
+#import <HBBasicLib/UIView+Animation.h>
 #import <HBBasicLib/HBButton.h>
 #import <HBBasicLib/HBLabel.h>
 #import <HBBasicLib/HBAttributesLabel.h>

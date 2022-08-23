@@ -20,7 +20,8 @@
 #ifndef kScreenHeight
 #define kScreenHeight   [UIScreen mainScreen].bounds.size.height
 #endif
-#define kStatusBarHeight    [[UIApplication sharedApplication] statusBarFrame].size.height
+
+#define kStatusBarHeight    [UIView getStatusBarHeight]
 
 #define kScreenSafeAreaInsets   [[UIApplication sharedApplication] delegate].window.safeAreaInsets
 #define kIsiPhoneX              [UIView isiPhoneX]

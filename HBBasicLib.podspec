@@ -2,14 +2,14 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "HBBasicLib"
-  spec.version      = "1.0.27"
+  spec.version      = "1.0.28"
   spec.summary      = "HBBasic iOS SDK"
   spec.description  = "iOS library for HBBasic"
   spec.homepage     = "https://github.com/hepburnalex/HBBasicLib"
   spec.license      = "MIT"
   spec.author       = { "hepburn" => "hepburn2019@163.com" }
   spec.platform     = :ios
-  spec.ios.deployment_target = "12.0"
+  spec.ios.deployment_target = "13.0"
   spec.source       = { :git => "https://github.com/hepburnalex/HBBasicLib.git", :tag => "#{spec.version}" }
   spec.vendored_frameworks = "HBBasicLib/HBBasicLib.framework"
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }

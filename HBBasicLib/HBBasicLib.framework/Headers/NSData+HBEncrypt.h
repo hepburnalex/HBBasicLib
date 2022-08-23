@@ -43,6 +43,18 @@ NS_ASSUME_NONNULL_BEGIN
 /// HMAC-SHA1加密
 - (NSData *)HMACSHA1EncryptData:(NSString *)secret;
 
+/// DES/ECB/PKCS5Padding解密
++ (NSData *)DESECBDecryptData:(NSString*)cipherText key:(NSString*)key;
+
+/// DES/CBC/PKCS5Padding解密
++ (NSData *)DESCBCDecryptData:(NSString*)cipherText key:(NSString*)key iv:(NSString *)iv;
+
+/// DES/ECB/PKCS5Padding加密
++ (NSString *)DESECBEncryptData:(NSData *)data key:(NSString *)key;
+
+/// DES/CBC/PKCS5Padding加密
++ (NSString *)DESCBCEncryptData:(NSData *)data key:(NSString *)key iv:(NSString *)iv;
+
 @end
 
 NS_ASSUME_NONNULL_END

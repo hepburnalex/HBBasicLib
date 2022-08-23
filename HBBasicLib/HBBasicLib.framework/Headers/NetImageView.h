@@ -49,6 +49,9 @@ typedef enum {
 /// 取消请求
 - (void)cancel;
 
+/// 重新加载图片
+- (void)reloadImage;
+
 /// 获取图片本地路径
 /// @param urlstr 图片链接
 + (NSString *)getLocalPathOfUrl:(NSString *)urlstr;
@@ -63,5 +66,12 @@ typedef enum {
 /// 注册图片加载时显示的loading视图
 /// @param loadViewName 加载视图的类名
 + (void)registerLoadingView:(NSString *)loadViewName;
+
+/// 下载图片
+/// @param urlstr 图片链接
+/// @param loadingBlock 加载回调
+/// @param reloadBlock 刷新图片回调
+/// @param finishBlock 加载完毕回调
++ (NSURLSessionDownloadTask *)downloadImageWithUrl:(NSString *)urlstr loading:(void(^)(BOOL))loadingBlock reload:(void (^)(NSString *))reloadBlock finish:(void (^)(void))finishBlock;
 
 @end

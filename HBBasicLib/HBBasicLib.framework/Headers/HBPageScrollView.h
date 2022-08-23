@@ -47,16 +47,30 @@
 /// @param index 索引
 - (void)scrollPage:(HBPageScrollView *)pageView onPageSelect:(NSInteger)index;
 
+/// 页面变更事件
+/// @param pageView 轮播图控件
+/// @param index 索引
+- (void)scrollPage:(HBPageScrollView *)pageView onPageChanged:(NSInteger)index;
+
 @end
 
 typedef NS_OPTIONS(NSInteger, HBPageScrollType) {
     HBPageScrollType_Normal   = 0,
-    HBPageScrollType_Scale    = 1
+    HBPageScrollType_Scale    = 1,
+    HBPageScrollType_Scale2   = 2
 };
 
 typedef NS_OPTIONS(NSInteger, HBPageScrollDirection) {
     HBPageScrollDirection_Vertical   = 1 << 0,
     HBPageScrollDirection_Horizonal  = 1 << 1
+};
+
+typedef NS_OPTIONS(NSInteger, HBPageReleaseCount) {
+    HBPageReleaseCount_All    = 0,
+    HBPageReleaseCount_Three  = 3,
+    HBPageReleaseCount_Five   = 5,
+    HBPageReleaseCount_Seven  = 7,
+    HBPageReleaseCount_Nine  = 9
 };
 
 
@@ -82,6 +96,12 @@ typedef NS_OPTIONS(NSInteger, HBPageScrollDirection) {
 
 /// 总页数
 @property (nonatomic, readonly) NSInteger pageCount;
+
+/// 默认宽度（仅限HBPageScrollType_Scale2）
+@property (nonatomic, assign) CGFloat defaultWidth;
+
+/// 最大创建页数
+@property (nonatomic, assign) HBPageReleaseCount pageReleaseCount;
 
 /// 重新加载
 - (void)reloadData;

@@ -37,6 +37,18 @@ NS_ASSUME_NONNULL_BEGIN
 /// MD5
 + (NSString *)MD5EncryptText:(NSString *)text;
 
+/// DES/ECB/PKCS5Padding解密
+- (NSString *)DESECBDecrypt:(NSString*)key;
+
+/// DES/CBC/PKCS5Padding解密
+- (NSString *)DESCBCDecrypt:(NSString*)key iv:(NSString *)iv;
+
+/// DES/ECB/PKCS5Padding加密
+- (NSString *)DESECBEncrypt:(NSString *)key;
+
+/// DES/CBC/PKCS5Padding加密
+- (NSString *)DESCBCEncrypt:(NSString *)key iv:(NSString *)iv;
+
 @end
 
 NS_ASSUME_NONNULL_END

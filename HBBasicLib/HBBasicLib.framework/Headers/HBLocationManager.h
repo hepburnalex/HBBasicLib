@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+
+//#define USE_CONTACT
+
+#ifdef USE_CONTACT
 #import <CoreLocation/CoreLocation.h>
 
 typedef enum {
@@ -39,6 +43,14 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)stopLocation;
 
 + (instancetype)instance;
+
+#else
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface HBLocationManager : NSObject
+
+#endif
 
 @end
 

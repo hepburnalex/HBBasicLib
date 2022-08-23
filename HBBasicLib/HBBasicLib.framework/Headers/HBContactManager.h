@@ -6,7 +6,7 @@
 //  Copyright © 2021 Hepburn. All rights reserved.
 //
 
-#define USE_CONTACT
+//#define USE_CONTACT
 
 
 #import <Foundation/Foundation.h>

@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIColor *placeholderColor;
 @property (nonatomic, strong) UIFont *font;
 
+- (void)setContentCornerRadius:(CGFloat)cornerRadius backColor:(UIColor *)backColor;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -36,6 +36,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 判断是否以汉字开头
 @property (nonatomic, readonly) BOOL isChineseFirst;
 
+/// 判断是否中文
+@property (nonatomic, readonly) BOOL isChinese;
+
 /// 是否是数字
 @property (nonatomic, readonly) BOOL isDigit;
 

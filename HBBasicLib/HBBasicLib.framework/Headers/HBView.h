@@ -120,6 +120,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 判断是否是iPhoneX
 + (BOOL)isiPhoneX;
 
+/// 获取状态栏高度
++ (CGFloat)getStatusBarHeight;
+
 @end
 
 NS_ASSUME_NONNULL_END
